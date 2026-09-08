@@ -1,0 +1,213 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #f6f1e7;
+  --color-surface: #eee6d8;
+  --color-raised: #f6f1e7;
+  --color-fg: #1a1410;
+  --color-muted: #6a5c50;
+  --color-faint: #6a5c50;
+  --color-border: #d4c6b4;
+  --color-accent: #7a2a1e;
+  --color-accent-fg: #f6f1e7;
+  --color-mark: #7a2a1e;
+  --color-paper: #f6f1e7;
+  --color-panel: #eee6d8;
+  --color-ink: #1a1410;
+  --color-rule: #d4c6b4;
+
+  --font-display: "Fraunces", "Iowan Old Style", "Palatino Linotype", serif;
+  --font-sans: "Source Sans 3", "Source Sans Pro", ui-sans-serif, system-ui, sans-serif;
+
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background: var(--color-paper);
+    color: var(--color-ink);
+    scroll-behavior: smooth;
+  }
+  body {
+    min-height: 100vh;
+    background: var(--color-paper);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+  }
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+    text-wrap: balance;
+  }
+  p {
+    text-wrap: pretty;
+  }
+  a {
+    text-underline-offset: 0.2em;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+}
+
+.timeline-wrapper {
+  padding: 1.5rem 1rem 5rem;
+}
+.timeline-container {
+  position: relative;
+  max-width: 56rem;
+  margin-inline: auto;
+  padding: 0;
+  list-style: none;
+}
+.timeline-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 1rem;
+  width: 1px;
+  background: var(--color-border);
+}
+.timeline-era {
+  position: relative;
+  list-style: none;
+  padding: 0 0 1.75rem 2.5rem;
+  scroll-margin-top: 6rem;
+}
+.timeline-era h2 {
+  display: inline-block;
+  margin: 0;
+  font-family: var(--font-sans);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-mark);
+}
+.timeline-era::after {
+  content: "";
+  position: absolute;
+  top: 0.35rem;
+  left: 1rem;
+  width: 0.75rem;
+  height: 0.75rem;
+  border: 1px solid var(--color-mark);
+  background: var(--color-paper);
+  transform: translateX(-50%) rotate(45deg);
+}
+.timeline-item {
+  position: relative;
+  padding: 0 0 2.5rem 2.5rem;
+  scroll-margin-top: 6rem;
+}
+.timeline-item::after {
+  content: "";
+  position: absolute;
+  top: 0.55rem;
+  left: 1rem;
+  width: 0.625rem;
+  height: 0.625rem;
+  border-radius: 999px;
+  background: var(--color-faint);
+  transform: translateX(-50%);
+}
+.timeline-item.is-active::after {
+  background: var(--color-mark);
+}
+.timeline-item .date {
+  display: block;
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.08em;
+  color: var(--color-mark);
+}
+.timeline-item h3 {
+  margin-top: 0.35rem;
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.25;
+  color: var(--color-fg);
+}
+.timeline-sub {
+  margin: 0.75rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+.timeline-sub li {
+  position: relative;
+  margin-top: 0.4rem;
+  padding-left: 0.85rem;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--color-muted);
+}
+.timeline-sub li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.7em;
+  width: 0.4rem;
+  height: 1px;
+  background: var(--color-mark);
+}
+.timeline-item a:hover h3 {
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+.timeline-item img {
+  display: block;
+  margin-top: 0.85rem;
+  max-width: 100%;
+  height: auto;
+}
+@media (min-width: 768px) {
+  .timeline-wrapper {
+    padding-inline: 1.5rem;
+  }
+  .timeline-container::before {
+    left: 50%;
+    transform: translateX(-0.5px);
+  }
+  .timeline-era {
+    width: 100%;
+    padding: 0.5rem 0 2rem;
+    text-align: center;
+  }
+  .timeline-era::after {
+    left: 50%;
+  }
+  .timeline-item {
+    width: 50%;
+    padding: 0 2.5rem 3.25rem;
+  }
+  .timeline-item.is-left {
+    text-align: right;
+  }
+  .timeline-item.is-right {
+    margin-left: 50%;
+  }
+  .timeline-item::after {
+    left: 50%;
+  }
+  .timeline-item.is-left .timeline-sub li {
+    padding-left: 0;
+    padding-right: 0.85rem;
+  }
+  .timeline-item.is-left .timeline-sub li::before {
+    left: auto;
+    right: 0;
+  }
+  .timeline-item.is-left img {
+    margin-left: auto;
+  }
+}
