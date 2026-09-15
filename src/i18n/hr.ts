@@ -266,6 +266,9 @@ export const HR: Record<MsgKey, string> = {
   "culture.d6.title": "Svadbe, krčme, restorani",
   "culture.d6.body":
     "Bend svira igre zemlje i pesme porodice za publiku koja plaća. Zato su flamenco, jazz manouche, čardaš, balkanski brass i lăutărească različite tradicije.",
+  "home.buildingKicker": "Još se gradi",
+  "home.building":
+    "Ovaj arhiv se još gradi. Stranice se dodaju kad se izvori zabilježe.",
   "home.kicker": "romanimusic.com · Holandija",
   "home.chI.title": "Poreklo i dugački put",
   "home.chI.body":

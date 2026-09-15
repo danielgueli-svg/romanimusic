@@ -52,37 +52,37 @@ export const NL_SURFACE: SurfacePack = {
     khamoro: {
       month: "Mei",
       place: "Praag, Tsjechië",
-      body: "Khamoro betekent zonlicht. Het grootste professionele Romani-festival ter wereld, in Praag sinds 1999. Laatste week van mei.",
+      body: "Khamoro betekent zonlicht. Het grootste professionele Romani-festival ter wereld, in Praag sinds 1999. Laatst ingediend: 24–30 mei 2026, de 28e. Slovo 21 en SP Saga. Officiële site voor het volgende jaar.",
     },
     jerez: {
       month: "Februari–maart",
       place: "Jerez de la Frontera, Spanje",
-      body: "Flamenco in de stad van de palos. Gitano-kunst op een publiek podium. Data op de officiële site.",
+      body: "Flamenco in de stad van de palos. Gitano-kunst op een publiek podium. Volgende ingediende editie: 19 februari–6 maart 2027, de 31e. Data op de officiële site.",
     },
     guca: {
       month: "Augustus",
       place: "Guča, Servië",
-      body: "De bekende Balkan-brassbijeenkomst. Geen festival alleen voor Roma. De oorsprong van het werk blijft de bruiloft.",
+      body: "De bekende Balkan-brassbijeenkomst. Geen festival alleen voor Roma. De oorsprong van het werk blijft de bruiloft. Laatst ingediend: 7–9 augustus 2026, de 65e. Officiële site.",
     },
     "romane-dyvesa": {
       month: "Augustus",
       place: "Gorzów Wielkopolski, Polen",
-      body: "Internationale ontmoetingen van Romani-ensembles. De organisatoren noemen het het oudste festival van dit soort, vanaf 1989. Edward Dębicki / Teatr Terno.",
+      body: "Internationale ontmoetingen van Romani-ensembles. De organisatoren noemen het het oudste festival van dit soort, vanaf 1989. Edward Dębicki / Teatr Terno. Laatst ingediend: 21 augustus 2026, de 38e, amfitheater van Gorzów.",
     },
     "cante-minas": {
       month: "Juli–augustus",
       place: "La Unión, Spanje",
-      body: "Flamenco van de mijn-cantes. Sinds 1961. De Lámpara Minera is de prijs. Geen volledige flamenco-encyclopedie.",
+      body: "Flamenco van de mijn-cantes. Sinds 1961. De Lámpara Minera is de prijs. Laatst ingediend: 29 juli–8 augustus 2026, de 65e. Geen volledige flamenco-encyclopedie.",
     },
     "bienal-sevilla": {
       month: "September",
       place: "Sevilla, Spanje",
-      body: "Even jaren. De grote flamenco-biënnale van Sevilla, vanaf 1980. Gitano-families zitten in het centrum van deze kunst. Eigendomsclaims zijn politiek.",
+      body: "Even jaren. De grote flamenco-biënnale van Sevilla, vanaf 1980. Gitano-families zitten in het centrum van deze kunst. Laatst ingediend: 9 september–3 oktober 2026, de 24e. Eigendomsclaims zijn politiek.",
     },
     django: {
       month: "Juni",
       place: "Fontainebleau / Samois-sur-Seine, Frankrijk",
-      body: "Een van de grootste festivals van deze muziek. De jazzkalender — jams, concerten, dit festival — leeft op de zustersite. Dit archief bewaart de geschiedenis.",
+      body: "Een van de grootste festivals van deze muziek. Ingediend: Fontainebleau, 25–28 juni 2026, 46e editie. De jazzkalender — jams, concerten, dit festival — leeft op de zustersite. Dit archief bewaart de geschiedenis.",
     },
   },
   traditions: {
@@ -120,6 +120,12 @@ export const NL_SURFACE: SurfacePack = {
         "Opleiding is geen één weg. Tess Lulu Orban (RomArchive, Hongarije) noteert dat veel amateur-Romungro- en Lovari-muzikanten op het gehoor spelen en daarop worden neergekeken, terwijl een goed deel van de professionele Romani-zangers en -instrumentalisten grote instellingen heeft gevolgd, waaronder de Liszt-academie in Boedapest. Beide is waar.",
         "Genoemde stoelen van het restaurantboek, nu met familiepagina’s naast Lakatos en Sárközi: Járóka, Boross, Danyi en Lendvai Csócsi, Toki Horváth Gyula, Sánta. Magyari Imre en Ernő Toki Balogh staan nog onder Later. Rinaldo Oláh is een Slowaakse primás van dezelfde beroepswereld. Fekete Vonat is een hiphopnaam uit de jaren negentig op RomArchive — hedendaags Midden-Europa, niet het caféboek.",
         "The Fiddle Channel, 2020, Hungarian Gypsy Music? loopt het gevecht Liszt–Bartók en dateert zalen. De volledige wandeling staat op het hoofdstuk Hongarije. Geen nieuwe familie uit de film tot oorsprong en bronnen zijn opgenomen.",
+        "Magyar nóta en de brács.",
+        "Magyar nóta zit in hetzelfde caféboek als verbunkos en csárdás: geschreven stedelijke zang- en dansstukken, gedragen door een Romani-strijkersband.",
+        "De primás leidt. De brács (altviool / kontra) antwoordt met akkoordritme.",
+        "Limbergers noot bij de Hankó–Boross-tape: in deze praktijk volgt de band de snelheid en stand van de strijkstok van de primás — geen vast geschreven pulsslag.",
+        "Tempo kan vertragen en versnellen zonder vooraftelling. Daarom is een brács-speler die de strijkstokarm niet ziet een uitdaging.",
+        "Een schone Hankó–Boross-huistape werd in Boedapest een leskopie.",
       ],
     },
     lautareasca: {
@@ -249,6 +255,8 @@ export const NL_SURFACE: SurfacePack = {
       about: [
         "Deze liedtraditie staat hier, naast gypsy jazz. Schnuckenack Reinhardt (1921–2006), Titi Winterstein, Häns’che Weiss. Folklore en swing in één viool.",
         "Porajmos: familie gedeporteerd in 1938. Het jazzcircuit staat op Gypsy Jazz Hub. Dit archief dient de folkloristische en liedkant in, en de klaagzang.",
+        "Musik Deutscher Zigeuner-lp’s, Da Camera Song: Schnuckenack Reinhardt Quintett deel 1, februari 1969; deel 4, april 1972. Siv B. Lie: de term gypsy jazz kwam in de jaren zeventig in gebruik na die Sinti-opleving.",
+        "Het Dokumentations- und Kulturzentrum Deutscher Sinti und Roma in Heidelberg houdt een bibliotheek van ongeveer 15.000 media-eenheden: 600 jaar Duitse Sinti- en Roma-geschiedenis, de Porajmos, burgerrechten na 1945, literatuur in het Romanes. Vanaf 24 januari 2019 host het ook RomArchive.",
       ],
     },
     "slovak-czech-song": {
@@ -372,7 +380,8 @@ export const NL_SURFACE: SurfacePack = {
     "Holland–Hungary violin": "Holland–Hongarije-viool",
   },
   roles: {
-    "Violin, primás": "Viool, primás",
+    "Violin, főprímás": "Viool, főprímás",
+    Brács: "Brács",
     "Violin dynasties": "Viooldynastieën",
     "Violin, bandleader": "Viool, bandleider",
     "Violin, verbunkos": "Viool, verbunkos",
@@ -413,7 +422,7 @@ export const NL_SURFACE: SurfacePack = {
   sources: {
     "digital-rooms": {
       title: "Eigen archieven (begin hier)",
-      lede: "RomArchive is de publieke digitale zaal. Wenen houdt de grote geluidskluis. De volledige gids van collecties staat op de archiefpagina.",
+      lede: "RomArchive is de publieke digitale zaal, sinds 24 januari 2019 gehost in Heidelberg. Wenen houdt de grote geluidskluis — Heinschink, 620 uur in 1999. De volledige gids van collecties staat op de archiefpagina.",
     },
     origins: {
       title: "Oorsprong, taal, de Porajmos",
@@ -473,6 +482,10 @@ export const NL_SURFACE: SurfacePack = {
       title: "Oost-Europese collecties — alleen een deur, nog geen hoofdstukalinea",
       lede: "Collecties in deze ronde geopend. Gelinkt vanaf Archieven waar een URL bestaat. De rest wacht op een stijlzin die u wilt laten schrijven.",
     },
+  },
+  neighboursNotes: {
+    boross: "Limberger (Manouche; hij hield de band, niet deze familie).",
+    limberger: "Boross is Hongaarse Roma-caféviool. Limberger hield de band. Geen verwantschap.",
   },
 };
 

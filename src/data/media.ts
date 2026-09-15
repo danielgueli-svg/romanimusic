@@ -148,6 +148,11 @@ export const MEDIA: Record<string, FiledMedia> = {
         title: "Hungarian Gypsy Music?",
         credit: "The Fiddle Channel, 2020",
       },
+      {
+        id: "8Mw2Ay4FBSE",
+        title: "Hanko Ferenc and Boros Lajos",
+        credit: "Tcha Limberger, 9 December 2020",
+      },
     ],
   },
   hungary: {
@@ -294,6 +299,27 @@ export const MEDIA: Record<string, FiledMedia> = {
       id: "R-L477kx8LA",
       title: "Věra Bílá & Kale — Pas o panori",
       credit: "verabilaakaleVEVO",
+    },
+  },
+  boross: {
+    youtube: {
+      id: "8Mw2Ay4FBSE",
+      title: "Hanko Ferenc and Boros Lajos",
+      credit: "Tcha Limberger, 9 December 2020",
+    },
+  },
+  "boross-lajos": {
+    youtube: {
+      id: "8Mw2Ay4FBSE",
+      title: "Hanko Ferenc and Boros Lajos",
+      credit: "Tcha Limberger, 9 December 2020",
+    },
+  },
+  "hanko-ferenc": {
+    youtube: {
+      id: "8Mw2Ay4FBSE",
+      title: "Hanko Ferenc and Boros Lajos",
+      credit: "Tcha Limberger, 9 December 2020",
     },
   },
 };

@@ -83,11 +83,17 @@ function FamilyPage() {
         <FiledMedia media={mediaOf(family.slug)} />
 
         <div className="mt-10 space-y-5">
-          {family.history.map((p) => (
-            <p key={p.slice(0, 48)} className="text-base leading-[1.7] text-fg/90">
-              {p}
-            </p>
-          ))}
+          {family.history.map((p) =>
+            p.startsWith("### ") ? (
+              <h2 key={p} className="pt-6 font-display text-2xl text-fg">
+                {p.slice(4)}
+              </h2>
+            ) : (
+              <p key={p.slice(0, 48)} className="text-base leading-[1.7] text-fg/90">
+                {p}
+              </p>
+            ),
+          )}
         </div>
 
         {family.quotes?.length ? (
@@ -128,6 +134,9 @@ function FamilyPage() {
               {t("families.neighbours")}
             </p>
             <p className="mt-1 text-xs text-muted">{t("families.neighboursLede")}</p>
+            {family.neighboursNote ? (
+              <p className="mt-1 text-xs text-muted">{family.neighboursNote}</p>
+            ) : null}
             <ul className="mt-3 flex flex-wrap gap-x-4 gap-y-2 text-sm">
               {neighbours.map((n) => (
                 <li key={n.slug}>

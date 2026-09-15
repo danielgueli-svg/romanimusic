@@ -264,6 +264,9 @@ export const SL: Record<MsgKey, string> = {
     "Učijo se v družini. Gledaš, dokler dvorana ne sede. Nekateri pozneje sedijo na konservatoriju, tudi na Lisztovi akademiji.",
   "culture.d6.title": "Poroke, gostilne, restavracije",
   "culture.d6.body": "Ansambel igra plese dežele in pesmi družine za plačljivo občinstvo.",
+  "home.buildingKicker": "V gradnji",
+  "home.building":
+    "Ta arhiv se še gradi. Strani se dodajajo, ko so viri zabeleženi.",
   "home.kicker": "romanimusic.com · Nizozemska",
   "home.chI.title": "Izvor in dolga pot",
   "home.chI.body": "Indijski izvor, pot na zahod, veliko glasb.",

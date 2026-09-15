@@ -33,6 +33,7 @@ export const NL_FAMILY_HISTORY: Record<string, string[]> = {
   reinhardt: [
     "Django werd in 1910 geboren in een Manouche-familie die al speelde. Parijse jazz gaf de familierechterhand een nieuwe zaal: het Quintette du Hot Club de France, met Stéphane Grappelli. Hij vond Sinti-muziek niet uit. Hij noemde haar voor de eeuw.",
     "Franz “Schnuckenack” Reinhardt (1921–2006) was een Duitse Sinti-violist van dezelfde naam, in 1938 oostwaarts gedreven. Hij ontmoette Django nooit. Na de oorlog zette zijn kwintet Sinti-swing terug in Duitse zalen, zodat een publiek dat haar had willen wissen haar moest horen.",
+    "Musik Deutscher Zigeuner, Da Camera Song. Deel 1, februari 1969. Deel 4, april 1972. Wikipedia: eerste concert van het kwintet, november 1967, Heidelberg. Häns’che Weiss op sologitaar op de latere delen, daarna zijn eigen kwintet in 1972. Folklore en swing op dezelfde schijven. De stoelen worden niet tot deze familie samengevoegd.",
   ],
   rosenberg: [
     "Sinti-families in de Lage Landen hielden Django’s taal na de oorlog. Het Rosenberg Trio (gevormd 1989) — Stochelo lead, Nous’che ritme, Nonnie bas — maakte die taal tot wat jongere spelers leerden.",
@@ -49,7 +50,9 @@ export const NL_FAMILY_HISTORY: Record<string, string[]> = {
   ],
   limberger: [
     "Tcha Limbergers site: geboren in een Belgische familie van Manouche-muzikanten. Grootvader Piotto Limberger, violist en bandleider. Vader Vivi Limberger, zanger en gitarist, nam op en toerde met Fapy Lafertin en de band Waso. Tcha studeerde Magyar nóta in Boedapest bij primás Horvát Béla, een Sinti-speler van het Hongaarse restaurantboek. De twee families blijven uit elkaar.",
+    "The Fiddle Channel, 2020, Hungarian Gypsy Music?: Tcha spreekt aan het eind. Auto-ondertitel schreef “Charlinberger.” Dit is zijn familiepagina. Hij zei in de film dat Magyar nóta muziek maken op hoog niveau is; het mag kunstmatige folk zijn en toch ongelooflijk; de meeste Romani-mensen spelen de muziek van het land waarin zij wonen. De familie blijft Manouche. Het boek blijft Hongaars.",
     "DjangoBooks 2005 voegt stoelen toe die Tcha’s site niet noemt (Storro, Jan, Sas van Gent). Die staan onder Later. Of Fapy oom of neef is, staat ook onder Later. Ferret van Parijs is een andere familie. Levende data: Gypsy Jazz Hub.",
+    "Op 9 december 2020 zette Tcha een schone overzetting van Hankó Ferenc (brács) en Boross Lajos (viool). Een huistape van een Nederlandse tournee in de jaren zestig, gelooft Limberger. Hij schrijft dat dat horen hem naar Boedapest bracht om de stijl te leren. De familie Boross houdt die opname. Deze familie blijft Manouche.",
   ],
   amaya: [
     "Carmen Amaya werd in 1913 in Barcelona geboren, Gitana. Haar voetwerk en aanwezigheid nam flamencodans de wereld rond. Het publieke beeld van baile gitano in de twintigste eeuw is nog altijd, deels, het hare.",
@@ -72,12 +75,14 @@ export const NL_FAMILY_HISTORY: Record<string, string[]> = {
   ],
   "reyes-baliardo": [
     "De Gipsy Kings groeiden uit Gitane-families rond Arles en Montpellier: verwantschap Reyes en Baliardo, rumba catalana, het woord “Gipsy” op wereldradio. Verwant aan flamenco, niet dezelfde palo.",
+    "Historia, mei 2026. Cooking Vinyl. NPR Alt.Latino, 20 mei 2026, speelde de titeltrack. De publieke naam op die plaat is Gipsy Kings featuring Tonino Baliardo.",
   ],
   clejani: [
     "Clejani is een lăutar-dorp. Families daar speelden Walachijse bruiloften, generatie na generatie. Etnomusicologen namen hen op in het interbellum, Speranța Rădulescu in 1983. Na 1989 stelden Stéphane Karo en Michel Winter (Crammed Discs, België) een taraf samen voor het Westen als Taraf de Haïdouks — eerste album 1991. Wikipedia’s ledenlijst (hier als die lijst ingediend, geen parochieboek): Nicolae Neacșu “Culai” viool (1924–september 2002); Dumitru Baicu “Cacurică” cimbalom (1931–september 2007); Ion Manole “Șaică” viool (1920–mei 2002); Ilie Iorga stem (1928–juni 2012, uit Mârșă bij Clejani); Gheorghe Anghel “Caliu” viool; Gheorghe Fălcaru “Fluierici” fluit en bas (1954–september 2016); en anderen op de Taraf-pagina. Neacșu’s geboorteplaats staat onder Later (Clejani vs Isaccea).",
   ],
   "zece-prajini": [
     "Zece Prăjini hield een brassvak. Fanfare Ciocărlia (publiek vanaf 1996) is de snelheid en het uithoudingsvermogen van dat dorp op een wereldpodium.",
+    "The Devil Rides Again, 2025. Asphalt Tango. Fanfare Ciocărlia met de Canadese gitarist Adrian Raso. Een tweede plaat na Devil’s Tale (2014). Geen concertagenda.",
   ],
   teodosievski: [
     "Esma Redžepova (1943–2016), Skopje. Stevo Teodosievski bouwde een ensemble rond haar stem. Joegoslavische podia, daarna internationale festivals. “Queen of Romani music” was een titel die de gemeenschap zelf gebruikte.",
@@ -136,6 +141,13 @@ export const NL_FAMILY_HISTORY: Record<string, string[]> = {
   boross: [
     "MTI / HVG: Lajos Boross stierf in het ziekenhuis op 8 juli 2014, 89 jaar — dus geboren 1925. Népművészet Mestere, 1953. Kossuth-prijs, 2006, voor het bevorderen van Romani-podiumkunsten. Op zeventien vormde hij zijn eigen orkest in het Trombitás étterem in Buda. Kodály Zoltán steunde zijn benoeming tot leidend primás van de Magyar Állami Népi Együttes in 1950. Vanaf 1958 leidde hij het volksorkest van Magyar Rádió. Restaurantzalen: Halászbástya étterem, 1972; Margitkert op Rózsadomb vanaf 1981.",
     "In 1985 werd hij alelnök en főprímás van de net opgerichte 100 Tagú Cigányzenekar. Hij stapte in 1998 om gezondheid uit die posten. Het orkest hield hem als örökös, tiszteletbeli főprímás. Datzelfde jaar, op een wedstrijd in de Pesti Vigadó, verleende hij Lendvai Csócsi József de titel Chief Primás — de eigen formulering van het 100 Tagú-orkest.",
+    "### Hankó Ferenc — de brács naast hem (Limberger)",
+    "Een huistape van een Nederlandse tournee, bewaard als leskopie onder Boedapestse caféspelers.",
+    "Tcha Limberger (Belgische Manouche; familie Limberger in dit archief — geen Boross-verwantschap) zette op 9 december 2020 een schone overzetting van een privé-opname van Hankó Ferenc (brács) en Boross Lajos (viool / primás). Limbergers eigen YouTube-beschrijving (https://youtu.be/8Mw2Ay4FBSE):",
+    "Het paar toerde in Holland in de jaren zestig (“I believe”).",
+    "Na een concert, in iemands huis, hadden zij gedronken en ruzie. Boross zei dat Hankó hem niet goed kon begeleiden als hij de strijkstokarm niet zag. Zij stonden rug aan rug en speelden.",
+    "De tape wordt vereerd onder muzikanten van Magyar nóta — Limberger noemt haar “the bible for all brács players.” Elke zichzelf respecterende Gypsy-muzikant in Boedapest heeft een kopie; veel rondgaande kopieën zijn vervormd. Limberger hoorde eerst een slechte kopie via Koen De Cauter; de schone kwam van verzamelaar Edely Pitios, van de man die haar op een Revox opnam. Dat horen, schrijft Limberger, bracht hem naar Boedapest om de stijl te leren.",
+    "Spelling: Limberger schrijft Boros; dit archief houdt Boross (ook Boros op Hongaarse platen). Dezelfde primás.",
   ],
   danyi: [
     "100tagu.hu (Engelse orkestpagina): Lőrinc Róbert Danyi, geboren 26 januari 1968 in Boedapest, muzikantenfamilie. Viool vanaf zijn zesde; eerste leraar Béla Berki. Vanaf 1978 studeerde hij volgens de Rajkó-methode (nu op Hongarije’s nationale inventaris van immaterieel erfgoed) onder Gyula Farkas, later Tivadar Mészáros. Leidend primás van het Rajkó-orkest vanaf 1990. Concertmeester en primás van het 100-koppige Roma-orkest vanaf 2010. Gekozen tot president in 2023.",

@@ -27,6 +27,17 @@ function Home() {
     <SiteShell>
       <section className="border-b border-rule">
         <div className="mx-auto max-w-5xl px-5 py-16 sm:py-24">
+          <aside
+            className="mb-10 max-w-xl border border-rule bg-panel/70 px-4 py-3 sm:px-5"
+            aria-label={t("home.buildingKicker")}
+          >
+            <p className="font-sans text-[11px] font-medium uppercase tracking-[0.22em] text-accent">
+              {t("home.buildingKicker")}
+            </p>
+            <p className="mt-1.5 text-sm leading-relaxed text-ink/85">
+              {t("home.building")}
+            </p>
+          </aside>
           <p className="font-sans text-[11px] font-medium uppercase tracking-[0.28em] text-accent">
             {t("home.kicker")}
           </p>

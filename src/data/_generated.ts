@@ -3067,7 +3067,7 @@ export const SOURCE_GROUPS = [
   {
     "id": "digital-rooms",
     "title": "Dedicated archives (start here)",
-    "lede": "RomArchive is the public digital room. Vienna holds the great sound vault. The full directory of collections is on the Archives page.",
+    "lede": "RomArchive is the public digital room, hosted in Heidelberg from 24 January 2019. Vienna holds the great sound vault — Heinschink, 620 hours in the 1999 ingest. The full directory of collections is on the Archives page.",
     "items": [
       {
         "id": "romarchive",
@@ -3075,7 +3075,7 @@ export const SOURCE_GROUPS = [
         "title": "RomArchive — Music",
         "credit": "Petra Gelbart, Carol Silverman, Siv B. Lie (curators)",
         "url": "https://www.romarchive.eu/en/music/",
-        "used": "The leading dedicated digital archive of Romani culture. Less-accessible materials; Russia, Balkans, Hungary, Romania, Manouche/Sinti. This site’s Archives page is the door."
+        "used": "The leading dedicated digital archive of Romani culture. Music curators: Petra Gelbart, Carol Silverman, Siv B. Lie. Online from 24 January 2019. Hosted by the Documentation and Cultural Centre of German Sinti and Roma, Heidelberg. Less-accessible materials; Russia, Balkans, Hungary, Romania, Manouche/Sinti. This site’s Archives page is the door."
       },
       {
         "id": "gelbart-origins",
@@ -3091,7 +3091,7 @@ export const SOURCE_GROUPS = [
         "title": "Phonogrammarchiv — Heinschink Collection",
         "credit": "Austrian Academy of Sciences, Vienna / Mozes F. Heinschink",
         "url": "https://www.oeaw.ac.at/en/phonogrammarchiv",
-        "used": "Hundreds of hours of song, tale and speech from 30+ Romani and Sinti groups, recorded from the 1960s. Eva Davidová’s Czech/Slovak tapes also here."
+        "used": "Mozes F. Heinschink recorded from 1960, without an institution. Ingest at the Phonogrammarchiv, 1990–95, with Christiane Fennesz-Juhasz. Fennesz, 1999: 620 hours, 4325 recordings, about 1100 sessions, more than 30 Roma and Sinti groups. About half speech and tale, half music. A later paper’s ~5800 items / ~960 hours is listed under Later."
       }
     ]
   },
@@ -6085,15 +6085,16 @@ export const LATER_GROUPS = [
       },
       {
         "id": "phonogram-count",
-        "title": "Vienna Phonogrammarchiv — ~5800 Romani items, ~960 hours",
-        "what": "Fennesz-Juhasz (academia.edu paper, Ethnographic sound collections of Roma): the Vienna Phonogrammarchiv holds approximately 5800 items of Romani recordings, totalling about 960 hours. The Archives page already pointed at Heinschink; the count can be written in if you want the number on the page.",
-        "sourceTitle": "Ethnographic sound collections of Roma",
+        "title": "Vienna Phonogrammarchiv — two Heinschink counts",
+        "what": "Fennesz-Juhasz 1999 (OEAW PDF): Heinschink Collection then 620 hours, 4325 recordings, about 1100 sessions, 30+ groups. That 1999 count is now on the source card. A later academia.edu paper, Ethnographic sound collections of Roma, prints approximately 5800 items totalling about 960 hours for the whole Vienna Romani holdings. Two counts, two dates, two scopes.",
+        "sourceTitle": "Fennesz-Juhasz 1999 / Ethnographic sound collections of Roma",
         "sourceCredit": "Christiane Fennesz-Juhasz",
-        "url": "https://www.academia.edu/4527964/Ethnographic_sound_collections_of_Roma_Aspects_of_their_original_context_archiving_and_use",
+        "url": "https://www.oeaw.ac.at/fileadmin/Institute/PHA/PDF/fennesz_1999.pdf",
+        "year": "1999 / later paper",
         "suggested": [
           "archives"
         ],
-        "whyLater": "A figure from a paper. Confirm against the current catalogue if you want it as a headline number."
+        "whyLater": "The 1999 ingest numbers are on the Archives page. The later 5800 / 960 figure is not used as a headline."
       },
       {
         "id": "esma-house",

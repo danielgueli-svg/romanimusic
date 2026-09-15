@@ -12,6 +12,7 @@ import {
 } from "./_generated";
 import {
   ARTIST_PATCHES,
+  CHAPTER_PATCHES,
   FAMILY_PATCHES,
   LINEAGE_PATCHES,
   NEW_ARTISTS,
@@ -19,6 +20,7 @@ import {
   NEW_LATER,
   NEW_SOURCES,
   ORCHESTRA_PATCHES,
+  TRADITION_PATCHES,
   type SourceQuote,
 } from "./patches";
 
@@ -43,6 +45,8 @@ export type FamilyHouse = {
   history: string[];
   members: FamilyMember[];
   quotes?: SourceQuote[];
+  extraNeighbourSlugs?: string[];
+  neighboursNote?: string;
 };
 
 export type OrchestraEvent = {
@@ -151,14 +155,40 @@ export const SOURCE_GROUPS = (SOURCE_GROUPS_RAW as unknown as {
   return { ...g, items: [...extra.filter((i) => !ids.has(i.id)), ...g.items] };
 });
 
-export const TRADITIONS = TRADITIONS_RAW as unknown as Tradition[];
+export const TRADITIONS = (TRADITIONS_RAW as unknown as Tradition[]).map((t) => {
+  const p = TRADITION_PATCHES[t.slug];
+  if (!p) return t;
+  const existingAbout = Array.isArray(t.about) ? t.about : t.about ? [t.about] : [];
+  const about = p.about ?? (p.extraAbout ? [...existingAbout, ...p.extraAbout] : t.about);
+  return { ...t, summary: p.summary ?? t.summary, about };
+});
 export const REGIONS = REGIONS_RAW as unknown as {
   slug: string;
   name: string;
   kicker?: string;
   chapterSlug?: string;
 }[];
-export const CHAPTERS = CHAPTERS_RAW as unknown as Chapter[];
+export const CHAPTERS = (CHAPTERS_RAW as unknown as Chapter[]).map((ch) => {
+  const patch = CHAPTER_PATCHES[ch.slug];
+  if (!patch) return ch;
+  let sections = ch.sections.map((s) => {
+    const sp = patch.sections?.find((p) => p.id === s.id);
+    if (!sp) return s;
+    return {
+      ...s,
+      title: sp.title ?? s.title,
+      kicker: sp.kicker ?? s.kicker,
+      paragraphs: [...(sp.paragraphs ?? s.paragraphs), ...(sp.extraParagraphs ?? [])],
+    };
+  });
+  for (const ins of patch.insertSections ?? []) {
+    const i = sections.findIndex((s) => s.id === ins.afterId);
+    const next = ins.section;
+    if (i >= 0) sections = [...sections.slice(0, i + 1), next, ...sections.slice(i + 1)];
+    else sections = [...sections, next];
+  }
+  return { ...ch, lede: patch.lede ?? ch.lede, sections };
+});
 
 export const LATER_GROUPS = (LATER_GROUPS_RAW as unknown as {
   id: string;
@@ -322,9 +352,20 @@ export function artistCountries(a: Artist): string[] {
 }
 export function neighboursOf(family: FamilyHouse) {
   const country = familyCountry(family);
-  return FAMILIES.filter(
+  const extra = (family.extraNeighbourSlugs ?? [])
+    .map((s) => FAMILIES.find((f) => f.slug === s))
+    .filter((f): f is FamilyHouse => f != null && f.slug !== family.slug);
+  const byCountry = FAMILIES.filter(
     (f) => f.slug !== family.slug && familyCountry(f) === country,
-  ).slice(0, 8);
+  );
+  const seen = new Set<string>();
+  const out: FamilyHouse[] = [];
+  for (const f of [...extra, ...byCountry]) {
+    if (seen.has(f.slug)) continue;
+    seen.add(f.slug);
+    out.push(f);
+  }
+  return out.slice(0, 8);
 }
 export function lineageOf(family: FamilyHouse) {
   return family.members.map((m, i) => {

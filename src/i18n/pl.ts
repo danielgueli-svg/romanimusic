@@ -266,6 +266,9 @@ export const PL: Record<MsgKey, string> = {
   "culture.d6.title": "Wesela, karczmy, restauracje",
   "culture.d6.body":
     "Zespół gra tańce kraju i pieśni rodziny dla płacącej publiczności. Dlatego flamenco, jazz manouche, czardasz, bałkański brass i lăutărească to różne tradycje.",
+  "home.buildingKicker": "W budowie",
+  "home.building":
+    "To archiwum jest jeszcze w budowie. Strony pojawiają się, gdy źródła są zapisane.",
   "home.kicker": "romanimusic.com · Niderlandy",
   "home.chI.title": "Pochodzenie i długa droga",
   "home.chI.body": "Indyjskie pochodzenie, droga na zachód, wiele muzyki.",

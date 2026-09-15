@@ -267,6 +267,9 @@ export const RO: Record<MsgKey, string> = {
   "culture.d6.title": "Nuntă, cârciumă, restaurant",
   "culture.d6.body":
     "Trupa cântă dansurile țării și cântecele familiei pentru un public care plătește. De aceea flamenco, jazz manouche, csárdás, brass balcanic și lăutărească sunt tradiții diferite.",
+  "home.buildingKicker": "În construcție",
+  "home.building":
+    "Această arhivă este încă în construcție. Paginile se adaugă pe măsură ce sursele sunt înregistrate.",
   "home.kicker": "romanimusic.com · Țările de Jos",
   "home.chI.title": "Origini și drumul lung",
   "home.chI.body":

@@ -28,6 +28,9 @@ export const NL_CHAPTERS_MORE: Record<string, ChapterPack> = {
         title: "Hoe het te noemen",
         paragraphs: [
           "De families wachtten niet op een criticus om de muziek te benoemen. Platen zeiden later gypsy jazz, of jazz manouche. Gypsy is het woord van buiten. Sinti, in de Duitstalige landen, en Manouche, in Frankrijk, zijn de woorden die veel families voor zichzelf gebruiken. Dit is Sinti- en Manouche-muziek, gebouwd in de jaren dertig op ouder familiespel, en nog altijd geleefd. Dezelfde handen kunnen ook Balkanbrass, flamenco of Hongaarse restaurantnummers spelen. Dat blijven andere stijlen.",
+          "Siv B. Lie, RomArchive Jazz: gypsy jazz begon in de jaren vijftig als genre te ontstaan, toen muzikanten die met Reinhardt hadden gewerkt zijn muziek bleven spelen. De term gypsy jazz, en de namen in andere talen, kwam pas in de jaren zeventig in gebruik, na een Sinti-opleving in het Duitse collectief Musik Deutscher Zigeuner.",
+          "Lie schrijft ook dat de stijl niet per se staat voor al het spelen en luisteren van Manouche en Sinti. Reinhardts eigen platen, schrijft zij, zijn jazz. De genrenaam kwam later.",
+          "Marcel Loeffler, Manouche-accordeonist uit de Elzas, zei tegen Lie op 8 november 2013 dat het woord jazz manouche in Django’s tijd niet bestond. Hij zei dat het veel later kwam, vanaf de jaren negentig. Daarvoor noemden mensen het Franse jazz. Twee data voor de publieke naam: Lie’s jaren zeventig, Loefflers jaren negentig. Beide blijven op de pagina.",
         ],
       },
       django: {
@@ -64,6 +67,9 @@ export const NL_CHAPTERS_MORE: Record<string, ChapterPack> = {
           "Vandaag reist de muziek nog dezelfde wegen. De jamsessies in Parijs, de kampen in Nederland, de festivals in Duitsland, de familiebijeenkomsten die de oude stukken levend houden — alles rust op een fundament ouder dan elke opname. Voor veel Sinti-families is gypsy jazz niet alleen een stijl. Het is ook een manier om te onthouden waar zij zijn geweest en wie zij zijn.",
           "In Nederland nam een kleine vereniging de oude Parijse naam. Stichting Hot Club de France Nederland werd in 1983 opgericht om Django en Grappelli’s stijl te laten horen toen bijna niemand die live speelde. Hun eerste concert was het WASO Quartet. Veertig jaar later zetten zij nog de jams op de lijst en tellen ongeveer honderd Hot Club-bands in het land. Dat is de amateur- en beroepscirkel rond de families Rosenberg, Schäfer en Basily — geen vervanging van hen.",
           "In de Elzas laten de APPONA-papieren in Straatsburg zien hoe jazz manouche in de jaren zeventig–2000 een genoemde gemeenschapspraktijk werd, niet alleen een Parijs verhaal uit de jaren dertig. Siv B. Lie’s Django Generations gebruikt dat fonds. Lie curateerde ook RomArchive Music. Het levende jamcircuit staat op Gypsy Jazz Hub. Het papier van hoe de familie publiek werd, staat hier.",
+          "Musik Deutscher Zigeuner, Da Camera Song, Heidelberg. Schnuckenack Reinhardt Quintett: deel 1, februari 1969; deel 4, april 1972. Wikipedia: deel 3, 1970, een liveplaat met zangeres Lida Goulesco. Het eerste concert van dat kwintet, Wikipedia: november 1967, Heidelberg.",
+          "Häns’che Weiss speelde sologitaar op deel 3 en 4. Engelse Wikipedia: hij vertrok in september 1972 en vormde zijn eigen kwintet. Duitse Wikipedia, met Da Camera Song: het oude kwintet ging in mei 1972 uit elkaar. Beide maanden blijven ingediend. De stoelen worden niet tot één familie samengevoegd.",
+          "Marcel Loeffler, door Lie geïnterviewd op 8 november 2013: in de jaren tachtig toerde hij door Europa met gitarist Mandino Reinhardt. Festivals in Italië, Engeland, Noorwegen, Rusland, Polen. Accordeon, niet alleen gitaar. Mandino is genoemd als speelpartner, niet als nieuwe Reinhardt-verwantschap.",
         ],
       },
       unrecorded: {

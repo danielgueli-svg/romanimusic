@@ -267,6 +267,9 @@ export const DE: Record<MsgKey, string> = {
   "culture.d6.title": "Hochzeiten, Wirtshäuser, Restaurants",
   "culture.d6.body":
     "Die Kapelle spielt die Tänze des Landes und die Lieder der Familie für ein zahlendes Publikum. Deshalb sind Flamenco, Jazz manouche, Csárdás, Balkan-Brass und Lăutărească verschiedene Traditionen.",
+  "home.buildingKicker": "Im Aufbau",
+  "home.building":
+    "Dieses Archiv wird noch gebaut. Seiten kommen hinzu, sobald Quellen aufgenommen sind.",
   "home.kicker": "romanimusic.com · Niederlande",
   "home.chI.title": "Ursprung und der lange Weg",
   "home.chI.body":

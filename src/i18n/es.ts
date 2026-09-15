@@ -268,6 +268,9 @@ export const ES: Record<MsgKey, string> = {
   "culture.d6.title": "Bodas, tabernas, restaurantes",
   "culture.d6.body":
     "La banda toca las danzas del país y las canciones de la familia para un público que paga. Por eso el flamenco, el jazz manouche, el csárdás, el brass de los Balcanes y la lăutărească son tradiciones distintas.",
+  "home.buildingKicker": "En construcción",
+  "home.building":
+    "Este archivo está todavía en construcción. Las páginas se añaden cuando se registran las fuentes.",
   "home.kicker": "romanimusic.com · Países Bajos",
   "home.chI.title": "Orígenes y el camino largo",
   "home.chI.body":

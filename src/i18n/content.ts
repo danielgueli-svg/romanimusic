@@ -26,6 +26,7 @@ export type SurfacePack = {
   later?: Record<string, { title?: string; lede?: string }>;
   roles?: Record<string, string>;
   labels?: Record<string, string>;
+  neighboursNotes?: Record<string, string>;
 };
 
 const CHAPTER_PACKS: Partial<Record<Locale, Record<string, ChapterPack>>> = {
@@ -131,11 +132,14 @@ export function locTradition(tr: Tradition, locale: Locale): Tradition {
 export function locFamily(f: FamilyHouse, locale: Locale): FamilyHouse {
   const summary = SURFACE[locale]?.families?.[f.slug];
   const history = SURFACE[locale]?.familyHistory?.[f.slug];
+  const neighboursNote =
+    SURFACE[locale]?.neighboursNotes?.[f.slug] ?? f.neighboursNote;
   return {
     ...f,
     summary: summary ?? f.summary,
     origin: locPlaces(f.origin, locale),
     history: history ?? f.history.map((p) => locPlaces(p, locale)),
+    neighboursNote,
     members: f.members.map((m) => ({
       ...m,
       role: locRole(m.role, locale),

@@ -266,6 +266,9 @@ export const CS: Record<MsgKey, string> = {
   "culture.d6.title": "Svatby, hospody, restaurace",
   "culture.d6.body":
     "Kapela hraje tance země a písně rodiny pro platící publikum. Proto jsou flamenco, jazz manouche, čardáš, balkánský brass a lăutărească různé tradice.",
+  "home.buildingKicker": "Ve výstavbě",
+  "home.building":
+    "Tento archiv se ještě staví. Stránky přibývají, jakmile jsou zdroje zapsány.",
   "home.kicker": "romanimusic.com · Nizozemsko",
   "home.chI.title": "Původ a dlouhá cesta",
   "home.chI.body": "Indický původ, cesta na západ, mnoho hudby.",

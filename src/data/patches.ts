@@ -16,13 +16,127 @@ export type LaterItem = {
   year?: string;
 };
 
+export type ChapterSectionPatch = {
+  id: string;
+  kicker?: string;
+  title?: string;
+  paragraphs?: string[];
+  extraParagraphs?: string[];
+};
+
+export type ChapterInsert = {
+  afterId: string;
+  section: {
+    id: string;
+    kicker?: string;
+    title?: string;
+    paragraphs: string[];
+  };
+};
+
+export const CHAPTER_PATCHES: Record<
+  string,
+  {
+    lede?: string;
+    sections?: ChapterSectionPatch[];
+    insertSections?: ChapterInsert[];
+  }
+> = {
+  origins: {
+    sections: [
+      {
+        id: "no-single",
+        kicker: "05",
+        extraParagraphs: [
+          "That circular-definition test is Petra Gelbart’s, on RomArchive: Is There Such a Thing as Romani Music? She writes that there is no Gypsy scale, rhythm or harmony that unites flamenco, jazz manouche, csárdás and the rest.",
+        ],
+      },
+    ],
+    insertSections: [
+      {
+        afterId: "porajmos",
+        section: {
+          id: "gelem",
+          kicker: "04",
+          title: "Gelem, gelem",
+          paragraphs: [
+            "Petra Gelbart, RomArchive: the song Gelem, gelem — also Dželem, dželem — was institutionalised as the Romani anthem at the first World Romani Congress in 1971. Until then it was a folk song to many Roma, primarily in the Balkans.",
+            "After the congress the song spread as an international anthem. Gelbart: the third and fourth verses were conceived more or less anew there, together with the Romani flag. Some Romani people have never heard it, or do not take it as theirs.",
+            "Many notices name Žarko Jovanović as the writer of those lyrics. This page files the 1971 congress act from Gelbart. The writer’s year is listed under Later.",
+          ],
+        },
+      },
+    ],
+  },
+  "roma-sinti": {
+    sections: [
+      {
+        id: "rooms",
+        extraParagraphs: [
+          "Österreichisches Musiklexikon, on Austria: Burgenland Roma and Sinti have a long trade as professional musicians. They play what the room asks. For Burgenland Roma the main genre is Hungarian gypsy music. For Sinti it is Sinti-jazz. Both are ethnic mainstream: they carry identity, and they were made for a paying majority. A Romanes vocal tradition is almost gone, the lexicon says, citing Heinschink and Fennesz-Juhasz.",
+        ],
+      },
+    ],
+  },
+  "gypsy-jazz": {
+    sections: [
+      {
+        id: "names",
+        extraParagraphs: [
+          "Siv B. Lie, RomArchive Jazz: Gypsy jazz began to emerge as a genre in the 1950s, when musicians who had worked with Reinhardt kept playing his music. The term Gypsy jazz, and the names in other languages, did not come into usage until the 1970s, after a Sinti revival in the German collective Musik Deutscher Zigeuner.",
+          "Lie also writes that the style is not necessarily representative of all Manouche and Sinti performing and listening. Reinhardt’s own records, she writes, are jazz. The genre name came later.",
+          "Marcel Loeffler, Manouche accordionist from Alsace, told Lie on 8 November 2013 that the word jazz manouche did not exist in Django’s time. He said it came much later, beginning in the 1990s. Before that, people called it French jazz. Two dates for the public name: Lie’s 1970s, Loeffler’s 1990s. Both stay on the page.",
+        ],
+      },
+      {
+        id: "after-django",
+        extraParagraphs: [
+          "Musik Deutscher Zigeuner, Da Camera Song, Heidelberg. Schnuckenack Reinhardt Quintett: volume 1, February 1969; volume 4, April 1972. Wikipedia: volume 3, 1970, a live record with singer Lida Goulesco. The first concert of that quintet, Wikipedia: November 1967, Heidelberg.",
+          "Häns’che Weiss played lead guitar on volumes 3 and 4. English Wikipedia: he left in September 1972 and formed his own quintet. German Wikipedia, citing Da Camera Song: the old quintet dissolved in May 1972. Both months stay filed. The chairs are not merged into one family.",
+          "Marcel Loeffler, interviewed by Lie on 8 November 2013: in the 1980s he toured Europe with guitarist Mandino Reinhardt. Festivals in Italy, England, Norway, Russia, Poland. Accordion, not only guitar. Mandino is named as a playing partner, not as a new Reinhardt kinship.",
+        ],
+      },
+    ],
+  },
+};
+
+export const TRADITION_PATCHES: Record<
+  string,
+  {
+    summary?: string;
+    about?: string[];
+    extraAbout?: string[];
+  }
+> = {
+  "german-sinti-song": {
+    extraAbout: [
+      "Musik Deutscher Zigeuner LPs, Da Camera Song: Schnuckenack Reinhardt Quintett volume 1, February 1969; volume 4, April 1972. Siv B. Lie: the term Gypsy jazz came into usage in the 1970s after that Sinti revival.",
+      "The Documentation and Cultural Centre of German Sinti and Roma, Heidelberg, holds a library of about 15,000 media units: 600 years of German Sinti and Roma history, the Porajmos, civil rights after 1945, literature in Romanes. From 24 January 2019 it also hosts RomArchive.",
+    ],
+  },
+  hungarian: {
+    extraAbout: [
+      "Magyar nóta and the brács.",
+      "Magyar nóta sits in the same café book as verbunkos and csárdás: authored urban song and dance pieces, carried by a Romani string band.",
+      "The primás leads. The brács (viola / kontra) answers with chordal rhythm.",
+      "Limberger’s note on the Hankó–Boross tape: in this practice the band follows the speed and position of the primás’s bow — not a fixed written pulse.",
+      "Tempo can slow and speed without a count-in. That is why a brács player who cannot see the bow arm is a challenge.",
+      "A clean Hankó–Boross home tape became a teaching copy in Budapest.",
+    ],
+  },
+};
+
 export const FAMILY_PATCHES: Record<string, Record<string, unknown>> = {
   limberger: {
     history: [
       "Tcha Limberger’s site: born into a Belgian family of Manouche musicians. Grandfather Piotto Limberger, violinist and bandleader. Father Vivi Limberger, singer and guitarist, recorded and toured with Fapy Lafertin and the band Waso. Tcha studied Magyar nóta in Budapest with primás Horvát Béla, a Sinti player of the Hungarian restaurant book. The two families stay distinct.",
       "The Fiddle Channel, 2020, Hungarian Gypsy Music?: Tcha speaks at the end. Auto-caption wrote “Charlinberger.” This is his family page. He told the film Magyar nóta is high-level music making; it may be artificial folk and still be incredible; most Romani people play the music of the country they live in. The family stays Manouche. The book stays Hungarian.",
       "DjangoBooks 2005 adds chairs Tcha’s site does not name (Storro, Jan, Sas van Gent). Those are listed under Later. Whether Fapy is uncle or cousin also is listed under Later. Ferret of Paris is a different family. Living dates: Gypsy Jazz Hub.",
+      "On 9 December 2020 Tcha uploaded a clean transfer of Hankó Ferenc (brács) and Boross Lajos (violin). A home tape from a Dutch tour in the 1960s, Limberger believes. He writes that hearing it made him go to Budapest to learn the style. The Boross family holds that recording. This family stays Manouche.",
     ],
+    extraNeighbourSlugs: ["boross"],
+    neighboursNote:
+      "Boross is Hungarian Roma café violin. Limberger kept the tape. Not the same kinship.",
   },
   bajramovic: {
     history: [
@@ -147,7 +261,17 @@ export const FAMILY_PATCHES: Record<string, Record<string, unknown>> = {
       "HVG / MTI, 9 July 2014: Lajos Boross died in hospital on Tuesday night, aged 89 — so born 1925. Confirmed to RomNet by Beke Farkas Nándor, president of the 100 Tagú. Violin from the age of five, first from his father Boross Géza, then from Rácz Laci, “prímáskirály.” 1938–40 in the Öreg Rajkók; already on Hungarian Radio. 1940–42 at the Music Academy, teacher Zatureczky Ede.",
       "At seventeen he formed his own orchestra at the Trombitás étterem in Buda. Kodály Zoltán backed his appointment as leading primás of the Állami Népi Együttes in 1950. Népművészet Mestere, 1953. From 1958, leading primás of the Magyar Rádió folk orchestra. Halászbástya étterem, 1972: HVG says he met Yehudi Menuhin there, who asked to play Brahms’s Fifth Hungarian Dance with him; Menuhin later wrote of that playing in The Music of Man. Margitkert on Rózsadomb from 1981.",
       "In 1985, HVG: he was crowned king of the primáses, and the same year became alelnök and főprímás of the newly founded 100 Tagú Cigányzenekar. He stepped down in 1998 for health; kept as örökös, tiszteletbeli főprímás. Kossuth Prize, 2006, for work popularising Romani performing arts. The 100 Tagú English page still names him as the man who conferred the Chief Primás title on Lendvai Csócsi in 1998 — that orchestra’s own wording.",
+      "### Hankó Ferenc — the brács beside him (Limberger)",
+      "A home tape from a Dutch tour, kept as a teaching copy among Budapest café players.",
+      "Tcha Limberger (Belgian Manouche; Limberger family on this archive — not Boross kin) uploaded a clean transfer of a private recording of Hankó Ferenc (brács) and Boross Lajos (violin / primás) on 9 December 2020. Limberger’s own YouTube description (https://youtu.be/8Mw2Ay4FBSE):",
+      "The pair were touring in Holland in the 1960s (“I believe”).",
+      "After a concert, in someone’s home, they had been drinking and argued. Boross claimed Hankó could not accompany him well if he could not see the bow arm. They stood back to back and played.",
+      "The tape is revered among musicians who play Magyar nóta — Limberger calls it “the bible for all brács players.” Every self-respecting Gypsy musician in Budapest has a copy; many circulating copies are distorted. Limberger first heard a bad copy via Koen De Cauter; the clean one came from collector Edely Pitios, from the man who recorded it on a Revox. That hearing, Limberger writes, made him go to Budapest to learn the style.",
+      "Spelling: Limberger writes Boros; this archive keeps Boross (also Boros on Hungarian plaques). Same primás.",
     ],
+    extraNeighbourSlugs: ["limberger"],
+    neighboursNote:
+      "Limberger (Manouche; transmitter of the tape, not this family).",
     quotes: [
       {
         lang: "hu",
@@ -156,6 +280,14 @@ export const FAMILY_PATCHES: Record<string, Record<string, unknown>> = {
         en: "Lajos Boross, Kossuth-prize primás, perpetual honorary főprímás of the 100 Member Hungarian Gypsy Orchestra, has died. The musician, in hospital, died on Tuesday night aged 89. He began the violin at five, first from his father Boross Géza, then from Rácz Laci, the king of primáses. In 1985 he was crowned king of the primáses, and the same year became vice-president and főprímás of the newly founded 100 Member orchestra. In 2006 a Kossuth Prize for work popularising gypsy performing art.",
         nl: "Lajos Boross, Kossuth-prijs-primás en eeuwig erelid-főprímás van het 100-koppige orkest, is overleden. In het ziekenhuis, 89 jaar, dinsdagnacht. Viool vanaf zijn vijfde, eerst van zijn vader Boross Géza, daarna van Rácz Laci, de primás-koning. In 1985 tot koning van de primáses gekroond, hetzelfde jaar vicevoorzitter en főprímás van het nieuwe 100-koppige orkest. In 2006 de Kossuth-prijs voor het uitdragen van de Roma-podiumkunst.",
         credit: "HVG, 9 July 2014, citing Beke Farkas Nándor / RomNet",
+      },
+      {
+        lang: "en",
+        original:
+          "These revered recordings should be admired and known to all who like Magyar Nota, Hungarian Chanson. They are known to all the musicians who play the style as being the bible for all bracs players.",
+        en: "These revered recordings should be admired and known to all who like Magyar Nota, Hungarian Chanson. They are known to all the musicians who play the style as being the bible for all brács players.",
+        nl: "Deze vereerde opnamen moeten gekend zijn door ieder die van Magyar nóta houdt, Hungarian Chanson. Voor de muzikanten van de stijl zijn ze de bijbel van alle brács-spelers.",
+        credit: "Tcha Limberger, YouTube, 9 December 2020 — Hanko Ferenc and Boros Lajos",
       },
     ],
   },
@@ -297,6 +429,20 @@ export const FAMILY_PATCHES: Record<string, Record<string, unknown>> = {
       "Zece Prăjini kept a brass trade for village weddings and funerals.",
       "Songlines (Garth Cartwright, 14 October 2021) and the Kennedy Center artist note: in 1996 the German sound engineer Henry Ernst came to the village and put that brass on a world stage as Fanfare Ciocărlia. Songlines: “fanfare” is the Romanian word for a brass band; “ciocărlia” means lark.",
       "Public from 1996. Cousin to Balkan truba, not to the string taraf of Clejani.",
+      "The Devil Rides Again, 2025. Asphalt Tango shop. Fanfare Ciocărlia with Canadian guitarist Adrian Raso. A second record after Devil’s Tale (2014). Not a concert diary.",
+    ],
+  },
+  "reyes-baliardo": {
+    history: [
+      "The Gipsy Kings grew from Gitane families around Arles and Montpellier: Reyes and Baliardo kinship, rumba catalana, the word “Gipsy” on world radio. Related to flamenco, not the same palo.",
+      "Historia, May 2026. Cooking Vinyl. NPR Alt.Latino, 20 May 2026, played the title track. The public name on that record is Gipsy Kings featuring Tonino Baliardo.",
+    ],
+  },
+  reinhardt: {
+    history: [
+      "Django was born 1910 into a Manouche family that already played. Paris jazz gave the family right hand a new room: the Quintette du Hot Club de France, with Stéphane Grappelli. He did not invent Sinti music. He named it for the century.",
+      "Franz “Schnuckenack” Reinhardt (1921–2006) was a German Sinti violinist of the same name, driven east in 1938. He never met Django. After the war his quintet put Sinti swing back in German rooms so a public that had tried to erase it would have to hear it.",
+      "Musik Deutscher Zigeuner, Da Camera Song. Volume 1, February 1969. Volume 4, April 1972. Wikipedia: first concert of the quintet, November 1967, Heidelberg. Häns’che Weiss on lead guitar for the later volumes, then his own quintet in 1972. Folklore and swing on the same discs. The chairs are not merged into this family.",
     ],
   },
 };
@@ -731,6 +877,18 @@ export const ARTIST_PATCHES: Record<string, Record<string, unknown>> = {
   "kocani-orkestar": {
     bio: "Romani brass from Kočani. Naat Veliov, trumpet, led the public name. Macedonian notices: born Kočani, 25 May 1957; grandfather Ahmet, trumpet. English Wikipedia: he led until 2000. The 1930s village memory and the 1990s festival name both stand. Cousin to Zece Prăjini, not the same family.",
   },
+  "boross-lajos": {
+    bio: "Budapest, 7 January 1925 — 8 July 2014. Perpetual honorary főprímás of the 100 Tagú. A home tape with Hankó Ferenc (brács), Dutch tour, 1960s in Limberger’s telling. Tcha Limberger uploaded a clean transfer on 9 December 2020.",
+  },
+  "gipsy-kings": {
+    bio: "Sons and nephews of José Reyes. Rumba catalana from Gitane families in the south of France, not Andalusian cante jondo. Historia, May 2026, Cooking Vinyl. NPR Alt.Latino, 20 May 2026, played the title track. Public name on that record: Gipsy Kings featuring Tonino Baliardo.",
+  },
+  "fanfare-ciocarlia": {
+    bio: "Romani brass from Moldavia. Speed, precision, wedding stamina. Public from 1996. The Devil Rides Again, 2025, Asphalt Tango, with Adrian Raso — a second record after Devil’s Tale (2014). Cousin to Balkan truba more than to the string taraf.",
+  },
+  "schnuckenack-reinhardt": {
+    bio: "German Sinti violinist, a relative of Django’s line, who never met him. His family was driven east in 1938. After the war he put Sinti music on German stages. Musik Deutscher Zigeuner, Da Camera Song: volume 1, February 1969; volume 4, April 1972. Wikipedia: first concert of the quintet, November 1967, Heidelberg.",
+  },
 };
 
 export const NEW_ARTISTS: Record<string, unknown>[] = [
@@ -785,7 +943,15 @@ export const NEW_ARTISTS: Record<string, unknown>[] = [
     role: "Violin, primás",
     country: "Hungary",
     traditionSlug: "hungarian",
-    bio: "Budapest, 7 January 1925 — 8 July 2014. Perpetual honorary főprímás of the 100 Tagú.",
+    bio: "Budapest, 7 January 1925 — 8 July 2014. Perpetual honorary főprímás of the 100 Tagú. A home tape with Hankó Ferenc (brács), Dutch tour, 1960s in Limberger’s telling. Tcha Limberger uploaded a clean transfer on 9 December 2020.",
+  },
+  {
+    slug: "hanko-ferenc",
+    name: "Hankó Ferenc",
+    role: "Brács",
+    country: "Hungary",
+    traditionSlug: "hungarian",
+    bio: "Named as the brács on a private tape with Boross Lajos. Tcha Limberger uploaded a clean transfer on 9 December 2020. Dutch tour, 1960s, Limberger believes. Birth and death are not filed. Not listed as Boross kin.",
   },
   {
     slug: "toki-horvath-gyula",
@@ -976,6 +1142,15 @@ export const NEW_SOURCES: {
         year: "2020",
         url: "https://www.youtube.com/watch?v=k9oaSVpE3kM",
         used: "Hungary chapter §05 and Cigányzene. Liszt 1859; 1423; 1681 preacher; 1683 noble’s fiddler; Mihály Barna 1737 (Sárosi doubts); verbunkos scale; Rózsavölgyi / Rosenthal 1835; Gyula–Arad 1892; Monti 1904; Dinicu; Bartók 1904–06; Rajkó 1952; State Folk Ensemble 1951; táncház (Timár, Halmos, Sebő, Martin); Muzsikás 1972; Bogyiszló / Kiss János Ökrös 1983 on Later; Tcha Limberger on Magyar nóta. Auto-captions; names checked against this archive.",
+      },
+      {
+        id: "limberger-hanko-boross-2020",
+        kind: "video",
+        title: "Hanko Ferenc and Boros Lajos",
+        credit: "Tcha Limberger",
+        year: "2020",
+        url: "https://youtu.be/8Mw2Ay4FBSE",
+        used: "Boross family and artist page. Home tape: Hankó Ferenc brács, Boross Lajos violin. Dutch tour, 1960s (“I believe”). Back to back after an argument. Bible for brács players of Magyar nóta. Koen De Cauter’s distorted copy; Edely Pitios; Revox. Upload 9 December 2020. Limberger writes Boros; this archive keeps Boross.",
       },
       {
         id: "arcanum-bihari",
@@ -1199,6 +1374,138 @@ export const NEW_SOURCES: {
       },
     ],
   },
+  {
+    group: "agenda",
+    items: [
+      {
+        id: "jerez-2027",
+        kind: "web",
+        title: "Festival de Jerez 2027",
+        credit: "festivaldejerez.es / turismojerez.com",
+        year: "2027",
+        url: "https://www.festivaldejerez.es/",
+        used: "31st edition, 19 February–6 March 2027, Jerez de la Frontera.",
+      },
+      {
+        id: "romane-dyvesa-2026",
+        kind: "web",
+        title: "XXXVIII Romane Dyvesa 2026",
+        credit: "Gazeta Lubuska / abilet.pl",
+        year: "2026",
+        url: "http://romane-dyvesa.com/",
+        used: "38th edition, 21 August 2026, Amfiteatr Gorzowski. Ewa Dębicka: a Romani wedding as the year’s frame. Edward Dębicki / Teatr Terno.",
+      },
+      {
+        id: "npr-gipsy-kings-historia-2026",
+        kind: "article",
+        title: "Gipsy Kings are back",
+        credit: "NPR Alt.Latino",
+        year: "2026",
+        url: "https://www.npr.org/2026/05/20/nx-s1-5826992/gipsy-kings-are-back-julieta-venegas-nortena-roots-and-more",
+        used: "Historia, May 2026. Title track played 20 May 2026. Public name: Gipsy Kings featuring Tonino Baliardo.",
+      },
+      {
+        id: "asphalt-devil-rides-again-2025",
+        kind: "record",
+        title: "The Devil Rides Again",
+        credit: "Asphalt Tango Records — Fanfare Ciocărlia feat. Adrian Raso",
+        year: "2025",
+        url: "https://www.asphalt-tango.de/shop/the-devil-rides-again",
+        used: "Second record with Adrian Raso after Devil’s Tale (2014). Official shop.",
+      },
+    ],
+  },
+  {
+    group: "digital-rooms",
+    items: [
+      {
+        id: "dokuzentrum-heidelberg",
+        kind: "archive",
+        title: "Dokumentations- und Kulturzentrum Deutscher Sinti und Roma",
+        credit: "Heidelberg",
+        url: "https://dokuzentrum.sintiundroma.de/",
+        used: "Library of about 15,000 media units: 600 years of German Sinti and Roma history, the Porajmos, civil rights after 1945, literature in Romanes. Host of RomArchive from 24 January 2019.",
+      },
+      {
+        id: "fennesz-heinschink-1999",
+        kind: "article",
+        title: "Tondokumentationen zur Kultur der Roma",
+        credit: "Christiane Fennesz-Juhasz, Phonogrammarchiv / OEAW",
+        year: "1999",
+        url: "https://www.oeaw.ac.at/fileadmin/Institute/PHA/PDF/fennesz_1999.pdf",
+        used: "Heinschink Collection ingest 1990–95. 620 hours, 4325 recordings, about 1100 sessions, more than 30 Roma and Sinti groups. Recorded from 1960. About half speech and tale, half music.",
+      },
+    ],
+  },
+  {
+    group: "origins",
+    items: [
+      {
+        id: "gelbart-is-there",
+        kind: "article",
+        title: "Is There Such a Thing as Romani Music?",
+        credit: "Petra Gelbart / RomArchive",
+        url: "https://www.romarchive.eu/en/music/there-such-thing-romani-music",
+        used: "Origins chapter, no-single: the circular definition; no one Gypsy scale or rhythm that covers flamenco, jazz manouche, csárdás and the rest.",
+      },
+      {
+        id: "gelbart-anthem",
+        kind: "article",
+        title: "The Romani Anthem as a Microcosm of Diversity",
+        credit: "Petra Gelbart / RomArchive",
+        url: "https://www.romarchive.eu/en/music/romani-anthem-microcosm-diversity/",
+        used: "Gelem, gelem / Dželem, dželem institutionalised at the first World Romani Congress, 1971. Folk song in the Balkans before that. Verses three and four more or less new at the congress, with the flag.",
+      },
+      {
+        id: "musiklexikon-roma-sinti",
+        kind: "article",
+        title: "Roma (Romnja) und Sinti (Sintice)",
+        credit: "Österreichisches Musiklexikon online",
+        url: "http://epub.oeaw.ac.at/ml/musik_R/Roma.xml",
+        used: "Roma and Sinti chapter, rooms: Burgenland Roma — Hungarian gypsy music; Sinti — Sinti-jazz; both ethnic mainstream; Romanes vocal tradition almost gone (Heinschink / Fennesz-Juhasz).",
+      },
+    ],
+  },
+  {
+    group: "gypsy-jazz",
+    items: [
+      {
+        id: "lie-romarchive-jazz",
+        kind: "article",
+        title: "Jazz",
+        credit: "Siv B. Lie / RomArchive",
+        url: "https://www.romarchive.eu/en/music/jazz/",
+        used: "Genre in the 1950s from players who had worked with Reinhardt. The term Gypsy jazz, and equivalents, from the 1970s after Musik Deutscher Zigeuner. Not necessarily representative of all Manouche and Sinti listening. Selmer / Selmer-Maccaferri.",
+      },
+      {
+        id: "loeffler-2013",
+        kind: "article",
+        title: "Interview with Marcel Loeffler, Manouche accordionist",
+        credit: "Siv B. Lie / RomArchive",
+        year: "2013",
+        url: "https://www.romarchive.eu/en/music/jazz/interview-marcel-loeffler-manouche-accordionist/",
+        used: "8 November 2013. Alsace. The word jazz manouche did not exist in Django’s time; Loeffler dates it from the 1990s, as French jazz before that. 1980s tours with Mandino Reinhardt.",
+      },
+      {
+        id: "mdz-vol1-discogs",
+        kind: "record",
+        title: "Musik Deutscher Zigeuner",
+        credit: "Schnuckenack Reinhardt Quintett / Da Camera Song SM 95015",
+        year: "1969",
+        url: "https://www.discogs.com/master/756998-Schnuckenack-Reinhardt-Quintett-Musik-Deutscher-Zigeuner",
+        used: "Volume 1, February 1969. German Sinti song page and the gypsy-jazz after-Django section.",
+      },
+      {
+        id: "mdz-vol4-discogs",
+        kind: "record",
+        title: "Musik Deutscher Zigeuner 4",
+        credit: "Schnuckenack Reinhardt Quintett / Da Camera Song SM 95035",
+        year: "1972",
+        url: "https://www.discogs.com/release/3983154-Schnuckenack-Reinhardt-Quintett-Musik-Deutscher-Zigeuner-4",
+        used: "Volume 4, April 1972. Recorded 29–30 November 1971. Häns’che Weiss on lead guitar.",
+      },
+    ],
+  },
 ];
 
 export const NEW_LATER: Record<string, LaterItem[]> = {
@@ -1234,6 +1541,22 @@ export const NEW_LATER: Record<string, LaterItem[]> = {
       sourceTitle: "The Fiddle Channel, Hungarian Gypsy Music?",
       year: "1737 / 2020",
       url: "https://www.youtube.com/watch?v=k9oaSVpE3kM",
+    },
+    {
+      id: "gelem-jovanovic-year",
+      title: "Gelem, gelem — Žarko Jovanović’s year",
+      what: "Gelbart, RomArchive, files the 1971 World Romani Congress act. Wikipedia and several notices name Žarko Jovanović as writer of the lyrics and print 1949. Some notices print 1969. This archive files the congress from Gelbart. The writer’s year waits.",
+      whyLater: "Two years in print. The 1971 act is on the origins chapter. The year of the lyrics is not picked.",
+      sourceTitle: "Gelbart / Wikipedia / notices",
+      year: "1949 / 1969",
+    },
+    {
+      id: "mdz-quintet-1972",
+      title: "Schnuckenack Reinhardt Quintett — May or September 1972?",
+      what: "German Wikipedia, citing Da Camera Song in Heidelberg: the old quintet dissolved in May 1972. English Wikipedia on Häns’che Weiss: he left in September 1972 and founded his own quintet. Discogs: Musik Deutscher Zigeuner 4 released April 1972. Both months stay on the gypsy-jazz page.",
+      whyLater: "Two months for the split. The LP year is sourced. The chairs are not merged.",
+      sourceTitle: "Wikipedia (de / en) / Discogs",
+      year: "1972",
     },
   ],
   "needs-second": [
@@ -1326,6 +1649,15 @@ export const NEW_LATER: Record<string, LaterItem[]> = {
       whyLater: "One magazine notice. The whole kinship chart waits until it is sourced.",
       sourceTitle: "Underground Magazin, 11 February 2005",
       year: "2005",
+    },
+    {
+      id: "loeffler-lagrene-cousin",
+      title: "Marcel Loeffler — cousin of Biréli Lagrène?",
+      what: "Loeffler, interviewed by Siv B. Lie on 8 November 2013, called guitarist Biréli Lagrène “my cousin.” First-person. No second family register opened this pass.",
+      whyLater: "A spoken kinship. Not filed onto the Reinhardt or Lagrène family pages until a second original is in hand.",
+      sourceTitle: "RomArchive — Interview with Marcel Loeffler",
+      year: "2013",
+      url: "https://www.romarchive.eu/en/music/jazz/interview-marcel-loeffler-manouche-accordionist/",
     },
   ],
 };

@@ -27,12 +27,21 @@ export const NL_CHAPTERS: Record<string, ChapterPack> = {
           "Dit is geen kanttekening bij de platen. Het is waarom zoveel Duitse Sinti-spelers van de volgende generatie Django’s stukken als overleven behandelden, niet als nostalgie — en waarom een archief van Romani-muziek ook een register is van wie moest verdwijnen.",
         ],
       },
+      gelem: {
+        title: "Gelem, gelem",
+        paragraphs: [
+          "Petra Gelbart, RomArchive: het lied Gelem, gelem — ook Dželem, dželem — werd in 1971 op het eerste Wereldcongres van de Roma tot Romani-hymne gemaakt. Tot dan was het voor veel Roma een volkslied, vooral op de Balkan.",
+          "Na het congres verspreidde het lied zich als internationale hymne. Gelbart: de derde en vierde strofe werden daar min of meer nieuw bedacht, samen met de Romani-vlag. Sommige Romani-mensen hebben het nooit gehoord, of nemen het niet als het hunne.",
+          "Veel berichten noemen Žarko Jovanović als schrijver van die tekst. Deze pagina dient de congresdaad van 1971 in, naar Gelbart. Het jaar van de schrijver staat onder Later.",
+        ],
+      },
       "no-single": {
         title: "Er is geen enkele Romani-muziek",
         paragraphs: [
           "Tenzij we de cirkeldefinitie gebruiken — muziek gespeeld door Romani-mensen — is er geen muziekwetenschappelijk genre dat flamenco, jazz manouche, Hongaarse csárdás, Balkanbrass, Russische romances en Turkse 9/8 dekt. Deze stijlen hebben onderling vaak minder gemeen dan met de muziek van het land om hen heen.",
           "Wat zij delen is een sociaal feit: Romani-muzikanten zijn herhaaldelijk de professionals van andermans feesten geworden, en hebben die muzieken van binnenuit veranderd. Non-Roma spelen ook “Gypsy style.” Liszt claimde een Gypsy-oorsprong voor Hongaarse muziek; Bartók en Kodály zeiden later dat de caféband Hongaarse populaire kunstmuziek was, gespeeld door Roma, onderscheiden van het dorpslied. Petra Gelbart bekritiseert die lijn omdat zij Romani-scheppingskracht ontkent. De onderzoekerspagina houdt het argument. De index van deze site blijft een atlas van families en stijlen.",
           "Roma en Sinti zijn geen twee woorden voor hetzelfde volk. Zij zijn verwanten van dezelfde lange weg die andere namen, talen en beroepen namen. Een deel van de cafémuziek — Hongaarse csárdás, Roemeense hora, Russische romances — is later door beiden gespeeld. Dat verhaal heeft een eigen hoofdstuk.",
+          "Die cirkeldefinitie is van Petra Gelbart, op RomArchive: Is There Such a Thing as Romani Music? Zij schrijft dat er geen Gypsy-toonladder, ritme of harmonie is die flamenco, jazz manouche, csárdás en de rest verenigt.",
         ],
       },
     },
@@ -56,6 +65,7 @@ export const NL_CHAPTERS: Record<string, ChapterPack> = {
           "Waar de families zich vestigden, werden zij professionals van de muziek om hen heen — en veranderden die van binnenuit. Sinti en Manouche in Frankrijk, Duitsland en de Lage Landen droegen een strijkerstraditie die in de jaren dertig jazz ontmoette. Die ontmoeting is gypsy jazz: gitaar-pompe, viool, de Hot Club. Rosenberg, Lagrène, Schäfer, Schnuckenack. Een Sinti-familielijn.",
           "Hongaarse Roma bouwden de restaurantviool: primás, cimbalom, csárdás en nóta. De lijn van Bihari, Lakatos, Sárközi. Roemeense Roma bouwden het lăutar-vak: bruilofts- en luistermuziek, doina en hora, het dorps-taraf en later het restaurant-taraf. Russische Roma bouwden koren en de zevensnarige gitaar, en een romance-repertoire dat de rest van Europa later als “Russian gypsy” bestelde. Spaanse Calé vormden flamenco. Balkan-Roma vormden brass en bruiloftsbanden.",
           "Dat zijn de gebruikelijke zalen, geen gesloten zalen. Een Sinti-familie kan een csárdás spelen. Een Hongaarse primás kan Django citeren. Het archief dient de familie in, omdat het publieke oor een eeuw lang alles tot één woord heeft samengedrukt.",
+          "Österreichisches Musiklexikon, over Oostenrijk: Burgenland-Roma en Sinti hebben een lang vak als beroepsmuzikanten. Zij spelen wat de zaal vraagt. Voor Burgenland-Roma is het hoofdgenre Hongaarse cigányzene. Voor Sinti is het Sinti-jazz. Beide zijn ethnic mainstream: zij dragen identiteit, en zij zijn gemaakt voor een betalende meerderheid. Een vocale traditie in het Romanes is bijna verdwenen, zegt het lexicon, met Heinschink en Fennesz-Juhasz.",
         ],
       },
       "cafe-book": {

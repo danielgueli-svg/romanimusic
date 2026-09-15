@@ -267,6 +267,9 @@ export const EN = {
   "culture.d6.body":
     "The band plays the country’s dances and the family’s songs for a paying public. That is why flamenco, jazz manouche, csárdás, Balkan brass and lăutărească are different traditions.",
   "home.kicker": "romanimusic.com · Netherlands",
+  "home.buildingKicker": "Under construction",
+  "home.building":
+    "This archive is still being built. Pages are added as sources are recorded.",
   "home.chI.title": "Origins and the long road",
   "home.chI.body":
     "An Indian origin, a westward road, and many musics — each one made in a country that tried to keep them at the edge of the map.",

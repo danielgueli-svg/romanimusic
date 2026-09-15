@@ -267,6 +267,9 @@ export const NL: Record<MsgKey, string> = {
   "culture.d6.title": "Bruiloften, herbergen, restaurants",
   "culture.d6.body":
     "De band speelt de dansen van het land en de liederen van de familie voor een betalend publiek. Daarom zijn flamenco, jazz manouche, csárdás, Balkanbrass en lăutărească verschillende tradities.",
+  "home.buildingKicker": "Nog in aanbouw",
+  "home.building":
+    "Dit archief wordt nog gebouwd. Pagina’s komen erbij als bronnen zijn opgenomen.",
   "home.kicker": "romanimusic.com · Nederland",
   "home.chI.title": "Oorsprong en de lange weg",
   "home.chI.body":

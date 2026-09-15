@@ -264,6 +264,9 @@ export const SQ: Record<MsgKey, string> = {
     "Mësojnë në familje. Shikon derisa salla të mbërthehet. Disa më vonë ulen në konservator, edhe në Akademinë Liszt.",
   "culture.d6.title": "Dasma, hane, restorante",
   "culture.d6.body": "Banda luan vallet e vendit dhe këngët e familjes për publik që paguan.",
+  "home.buildingKicker": "Në ndërtim",
+  "home.building":
+    "Ky arkiv është ende në ndërtim. Faqet shtohen kur burimet regjistrohen.",
   "home.kicker": "romanimusic.com · Holanda",
   "home.chI.title": "Origjina dhe rruga e gjatë",
   "home.chI.body": "Origjinë indiane, rrugë drejt perëndimit, shumë muzika.",

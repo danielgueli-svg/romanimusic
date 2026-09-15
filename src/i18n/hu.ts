@@ -267,6 +267,9 @@ export const HU: Record<MsgKey, string> = {
   "culture.d6.title": "Esküvők, kocsmák, éttermek",
   "culture.d6.body":
     "A banda az ország táncait és a család dalait játssza fizető közönségnek. Ezért más a flamenco, a jazz manouche, a csárdás, a balkáni brass és a lăutărească.",
+  "home.buildingKicker": "Még épül",
+  "home.building":
+    "Ez az archívum még épül. Az oldalak akkor kerülnek fel, amikor a forrásokat rögzítjük.",
   "home.kicker": "romanimusic.com · Hollandia",
   "home.chI.title": "Eredet és a hosszú út",
   "home.chI.body":
