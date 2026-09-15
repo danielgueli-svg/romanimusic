@@ -11,8 +11,10 @@ import {
   neighboursOf,
   orchestraFor,
 } from "@/data/catalog";
+import type { SourceQuote } from "@/data/patches";
 import { useI18n } from "@/i18n/provider";
 import { locFamily, locTradition } from "@/i18n/content";
+import type { Locale } from "@/i18n/locales";
 import { pageHead } from "@/lib/seo";
 import { JsonLd } from "@/components/json-ld";
 import { SITE_ORIGIN } from "@/lib/site";
@@ -42,6 +44,11 @@ function FamilyPage() {
   const lineage = lineageOf(family);
   const orchestra = orchestraFor(family.slug);
   const neighbours = neighboursOf(family).map((n) => locFamily(n, locale));
+  const headingAt = family.history.findIndex((p) => p.startsWith("### "));
+  const lead = headingAt >= 0 ? family.history.slice(0, headingAt) : family.history;
+  const rest = headingAt >= 0 ? family.history.slice(headingAt) : [];
+  const hvgQuotes = (family.quotes ?? []).filter((q) => /HVG/i.test(q.credit));
+  const otherQuotes = (family.quotes ?? []).filter((q) => !/HVG/i.test(q.credit));
 
   return (
     <SiteShell>
@@ -82,37 +89,10 @@ function FamilyPage() {
         <p className="mt-6 text-lg leading-relaxed text-muted">{family.summary}</p>
         <FiledMedia media={mediaOf(family.slug)} />
 
-        <div className="mt-10 space-y-5">
-          {family.history.map((p) =>
-            p.startsWith("### ") ? (
-              <h2 key={p} className="pt-6 font-display text-2xl text-fg">
-                {p.slice(4)}
-              </h2>
-            ) : (
-              <p key={p.slice(0, 48)} className="text-base leading-[1.7] text-fg/90">
-                {p}
-              </p>
-            ),
-          )}
-        </div>
-
-        {family.quotes?.length ? (
-          <section className="mt-10 space-y-4">
-            {family.quotes.map((q) => (
-              <figure key={q.original.slice(0, 40)} className="border-l-2 border-mark pl-4">
-                <p lang={q.lang} className="text-base leading-[1.7] text-fg">
-                  {q.original}
-                </p>
-                {q.lang !== locale ? (
-                  <p className="mt-3 text-sm leading-relaxed text-muted">
-                    {locale === "nl" && q.nl ? q.nl : q.en}
-                  </p>
-                ) : null}
-                <figcaption className="mt-2 text-xs text-faint">{q.credit}</figcaption>
-              </figure>
-            ))}
-          </section>
-        ) : null}
+        <HistoryBlock paragraphs={lead} />
+        <QuoteBlock quotes={hvgQuotes} locale={locale} />
+        <HistoryBlock paragraphs={rest} />
+        <QuoteBlock quotes={otherQuotes} locale={locale} />
 
         <section className="mt-12">
           <h2 className="font-display text-2xl text-fg">{t("lineage.title")}</h2>
@@ -169,5 +149,57 @@ function FamilyPage() {
         </p>
       </article>
     </SiteShell>
+  );
+}
+
+function linkify(text: string) {
+  return text.split(/(https?:\/\/[^\s)]+)/g).map((part, i) =>
+    /^https?:\/\//.test(part) ? (
+      <a key={i} href={part} className="text-fg underline">
+        {part}
+      </a>
+    ) : (
+      part
+    ),
+  );
+}
+
+function HistoryBlock({ paragraphs }: { paragraphs: string[] }) {
+  if (!paragraphs.length) return null;
+  return (
+    <div className="mt-10 space-y-5">
+      {paragraphs.map((p) =>
+        p.startsWith("### ") ? (
+          <h2 key={p} className="font-display text-2xl text-fg">
+            {p.slice(4)}
+          </h2>
+        ) : (
+          <p key={p.slice(0, 48)} className="text-base leading-[1.7] text-fg/90">
+            {linkify(p)}
+          </p>
+        ),
+      )}
+    </div>
+  );
+}
+
+function QuoteBlock({ quotes, locale }: { quotes: SourceQuote[]; locale: Locale }) {
+  if (!quotes.length) return null;
+  return (
+    <section className="mt-10 space-y-4">
+      {quotes.map((q) => (
+        <figure key={q.original.slice(0, 40)} className="border-l-2 border-mark pl-4">
+          <p lang={q.lang} className="text-base leading-[1.7] text-fg">
+            {q.original}
+          </p>
+          {q.lang !== locale ? (
+            <p className="mt-3 text-sm leading-relaxed text-muted">
+              {locale === "nl" && q.nl ? q.nl : q.en}
+            </p>
+          ) : null}
+          <figcaption className="mt-2 text-xs text-faint">{q.credit}</figcaption>
+        </figure>
+      ))}
+    </section>
   );
 }

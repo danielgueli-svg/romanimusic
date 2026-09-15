@@ -381,7 +381,7 @@ export const LIVES: Record<string, LifeStory> = {
       "1950: State Folk Ensemble. MTI says Kodály stood behind the appointment.",
       "Master of Folk Art: one obituary 1953, another page 1954. Both stand.",
       "1985: főprímás of the 100 Tagú. 1998: health. Perpetual honorary chair. Kossuth Prize, 2006.",
-      "Hankó tape (Limberger, 2020 upload) — private Holland-tour recording, 1960s; Hankó Ferenc brács + Boross violin; back-to-back after argument about following the bow.",
+      "Hankó tape (Limberger, 2020 upload) — private Holland-tour recording, 1960s; Hankó Ferenc brács + Boross violin; back-to-back after argument about following the bow. https://youtu.be/8Mw2Ay4FBSE",
     ],
     sources: [
       { label: "MTI / HVG, 2014" },
