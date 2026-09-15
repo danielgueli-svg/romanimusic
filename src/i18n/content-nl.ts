@@ -148,6 +148,7 @@ export const NL_CHAPTERS: Record<string, ChapterPack> = {
         paragraphs: [
           "Een groot deel van wat de wereld als “Gypsy music” hoort, is werkmuziek: bruiloften, dopen, begrafenissen, herbergen, restaurants, theaters. De zaal betaalt. De band levert de dansen van het land en de liederen van de familie. Daarom kunnen dezelfde mensen een lokaal volksrepertoire spelen en toch Romani-professionals zijn — het argument van Rădulescu voor de lăutari; Sárosi’s catalogus van de Hongaarse restaurantband; Seemans etnografie van Turkse Roman-buurtbruiloften, informele lessen, studio’s en podia.",
           "Silverman (Romani Routes, 2012) is de waarschuwing voor de Balkan: het worldmusic-podium verkoos brass-spektakel; Romani-feesten huren vaak een synthesizer-bruiloftsband. Het werk veranderde. De families pasten zich aan. Zo werden ook manele, chalga, tallava en Roman oyun havası publieke genres — niet omdat een folklorist ze benoemde, maar omdat de betalende zaal iets nieuws vroeg.",
+          "Limberger (Jimmy Grant-interview, https://youtu.be/CSGObB0WIqw): het eerste werk van een professionele Romani-muzikant is het lokale repertoire — of geen geld. In Transsylvanië betekende dat Hongaarse én Roemeense boeken (en eerder Joodse, Zwabische, Saksische en andere lokale vragen). Meer boeken, meer werk. Er was geen één product genaamd “Gypsy music”; er waren de lokale betalende boeken. Getuigenis over overdracht, geen nieuwe stijlpagina.",
         ],
       },
       changed: {

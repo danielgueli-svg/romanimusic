@@ -107,6 +107,8 @@ export const NL_SURFACE: SurfacePack = {
         "Na de oorlog zetten Duitse Sinti-violisten — Schnuckenack Reinhardt, Häns’che Weiss, Titi Winterstein — de muziek terug op podia. In de Lage Landen hielden de families Rosenberg, Schäfer, Basily en Limberger de lijn. Een ander Nederlands publiek huurde in dezelfde decennia Hongaarse en Roemeense restaurantorkesten — Veres, Mirando, Serban — dat is een ander hoofdstuk.",
         "Siv B. Lie’s Django Generations gebruikt de APPONA-archieven in Straatsburg: jazz manouche als genoemde gemeenschapspraktijk in de Elzas, niet alleen een Parijs verhaal uit de jaren dertig. Het levende circuit staat op Gypsy Jazz Hub.",
         "Gipsy Festival Angers programmeert manouche naast Gitane- en Balkannachten. Die mix is een affiche, geen één familie. De jam-globe, Selmer-winkels en Django’s levende circuit blijven op gypsyjazzhub.com.",
+        "Apart van het caféboek.",
+        "Limberger behandelt Django’s project als los van Magyar nóta / Roemeense / Balkan-café- en dorpsstijlen. Django wilde jazz. Occasionele “Hongaars” gekleurde of Russische romance-tunes in het wijdere circuit zijn niet de Boedapestse band. Limbergers eigen weg: Manouche-familie → vioolhervatting → Boedapest nóta-studie — twee stoelen, één muzikant. Familiepagina: Limberger. Jimmy Grant-interview, https://youtu.be/CSGObB0WIqw.",
       ],
     },
     hungarian: {
@@ -190,6 +192,8 @@ export const NL_SURFACE: SurfacePack = {
         "Lajos Veres kwam in 1935 met een zesmansband naar Rotterdam en bleef. De familie Weiss van Tata Mirando vluchtte in 1936 voor de nazi’s. Gregor Serban was er al sinds 1931, in het Kurhaus met het orkest van zijn vader.",
         "Intussen hielden in Boedapest de families Lakatos en Sárközi hetzelfde repertoire in leven. Twee Nederlandse werelden staan naast elkaar: Sinti gypsy jazz, en dit oudere caféorkest. Zij deelden steden. Zij deelden geen rechterhand.",
         "Het caféboek zelf was al gemengd. Csárdás en nóta uit Hongarije, hora uit Roemenië, Russische romances. Hetzelfde menu. Niet dezelfde mensen. Het hoofdstuk Roma en Sinti is de kaart van dat verschil.",
+        "Westers “Hungarian” ≠ het Boedapestse boek.",
+        "Limberger (Manouche; Jimmy Grant-interview, https://youtu.be/CSGObB0WIqw): Westerse Sinti/Manouche zeggen vaak dat zij Hongaarse muziek spelen, maar bedoelen D-mineur restauranttunes die grotendeels Russisch zijn, soms Joods of Hongaars — zonder Hongaarse taal of het Boedapestse vak. De Nederlandse café-primás-lijn op deze pagina (Veres, Mirando, Serban) is het restaurantboek op reis. De Manouche-gitaarkampen zijn een andere wereld. Hetzelfde woord op een affiche; niet dezelfde rechterhand. Volledig nóta-vak op de Hongaarse stijlpagina.",
       ],
     },
     manele: {

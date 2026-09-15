@@ -1,4 +1,4 @@
-import { createFileRoute, Link, notFound } from "@tanstack/react-router";
+import { createFileRoute, Link, notFound, redirect } from "@tanstack/react-router";
 import { ArchiveCrumb } from "@/components/crumb";
 import { FiledMedia } from "@/components/filed-media";
 import { SiteShell } from "@/components/site-shell";
@@ -11,8 +11,18 @@ import { pageHead } from "@/lib/seo";
 import { JsonLd } from "@/components/json-ld";
 import { SITE_ORIGIN } from "@/lib/site";
 
+const STYLE_SLUG_ALIASES: Record<string, string> = {
+  "jazz-manouche": "gypsy-jazz",
+};
+
 export const Route = createFileRoute("/styles/$slug")({
   component: StylePage,
+  beforeLoad: ({ params }) => {
+    const canonical = STYLE_SLUG_ALIASES[params.slug];
+    if (canonical) {
+      throw redirect({ to: "/styles/$slug", params: { slug: canonical } });
+    }
+  },
   loader: ({ params }) => {
     const style = getTradition(params.slug);
     if (!style) throw notFound();

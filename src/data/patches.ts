@@ -98,6 +98,35 @@ export const CHAPTER_PATCHES: Record<
       },
     ],
   },
+  hungary: {
+    insertSections: [
+      {
+        afterId: "verbunkos",
+        section: {
+          id: "limberger-nota",
+          kicker: "02b",
+          title: "Limberger on Magyar nóta (musician’s testimony)",
+          paragraphs: [
+            "Tcha Limberger (Belgian Manouche; Limberger family on this archive) describes Magyar nóta from the Budapest café chair he went to learn — not from Western Manouche menu cards. Jimmy Grant interview, https://youtu.be/CSGObB0WIqw. This is one musician’s testimony. It sits beside Sárosi, Gelbart, and the Fiddle Channel. It does not replace them.",
+            "Band. Primás violin; a second violin on inner voices and double stops; brács (viola / kontra — the chordal rhythm that often disappears into the texture until it stops and the band feels cut in half); cimbalom with hammers; double bass; cello; often clarinet. He points to a Hankó Ferenc (brács) / Boross Lajos (violin) home tape as a teaching copy for brács players — see the Boross family. The tape itself is filed there (https://youtu.be/8Mw2Ay4FBSE).",
+            "How the book was made, in his telling. In the nineteenth century Hungarian nobility wanted a national upper-class music — not Viennese / Mozart, not peasant village song. They hired Romani musicians and had them trained in classical technique to play the new style. After that, he says, it has been Romani professionals who play it. Asked if that makes it “Gypsy music,” he will not settle the label.",
+            "Two unfairnesses. Bartók and Kodály rang the alarm when nóta crowded out village music — he agrees losing the village would be a pity. Today purists call nóta “artificial folk.” He compares Portuguese fado: also composed and urban, not thousand-year village song, yet not dismissed that way. He likes both village music and Magyar nóta.",
+            "Magyar nóta = Hungarian song, built with classical violin / bass / cello / clarinet technique into a folklore-like public sound.",
+          ],
+        },
+      },
+    ],
+  },
+  transmission: {
+    sections: [
+      {
+        id: "job",
+        extraParagraphs: [
+          "Limberger (Jimmy Grant interview, https://youtu.be/CSGObB0WIqw): a professional Romani musician’s first job is the local repertoire — or no money. In Transylvania that meant Hungarian and Romanian books (and earlier Jewish, Swabian, Saxon, and other local asks). More books, more work. There was not one product called “Gypsy music”; there were the local paying books. File as testimony on transmission, not as a new style page.",
+        ],
+      },
+    ],
+  },
 };
 
 export const TRADITION_PATCHES: Record<
@@ -124,6 +153,18 @@ export const TRADITION_PATCHES: Record<
       "A clean Hankó–Boross home tape became a teaching copy in Budapest.",
     ],
   },
+  "holland-hungary": {
+    extraAbout: [
+      "Western “Hungarian” ≠ Budapest book.",
+      "Limberger (Manouche; Jimmy Grant interview, https://youtu.be/CSGObB0WIqw): Western Sinti/Manouche often say they play Hungarian music, but mean D-minor restaurant tunes that are largely Russian, sometimes Jewish or Hungarian — without Hungarian language or the Budapest craft. The Dutch café primás line on this page (Veres, Mirando, Serban) is the restaurant book on the road. The Manouche guitar camps are another world. Same word on a poster; not the same right hand. Full nóta craft on the Hungarian style page.",
+    ],
+  },
+  "gypsy-jazz": {
+    extraAbout: [
+      "Separate from the café book.",
+      "Limberger treats Django’s project as separate from Magyar nóta / Romanian / Balkan café and village styles. Django wanted jazz. Occasional “Hungarian”-flavoured or Russian romance tunes in the wider circuit are not the Budapest band. Limberger’s own road: Manouche family → violin recovery → Budapest nóta study — two chairs, one musician. Family page: Limberger. Jimmy Grant interview, https://youtu.be/CSGObB0WIqw.",
+    ],
+  },
 };
 
 export const FAMILY_PATCHES: Record<string, Record<string, unknown>> = {
@@ -131,6 +172,7 @@ export const FAMILY_PATCHES: Record<string, Record<string, unknown>> = {
     history: [
       "Tcha Limberger’s site: born into a Belgian family of Manouche musicians. Grandfather Piotto Limberger, violinist and bandleader. Father Vivi Limberger, singer and guitarist, recorded and toured with Fapy Lafertin and the band Waso. Tcha studied Magyar nóta in Budapest with primás Horvát Béla, a Sinti player of the Hungarian restaurant book. The two families stay distinct.",
       "The Fiddle Channel, 2020, Hungarian Gypsy Music?: Tcha speaks at the end. Auto-caption wrote “Charlinberger.” This is his family page. He told the film Magyar nóta is high-level music making; it may be artificial folk and still be incredible; most Romani people play the music of the country they live in. The family stays Manouche. The book stays Hungarian.",
+      "Jimmy Grant interview (https://youtu.be/CSGObB0WIqw): Tcha on Magyar nóta vs village music, on Western “Hungarian” menus, on Django kept separate, on Transylvania multi-repertoire work. Style history thickened from that interview. Brács teaching tape he points to: Hankó / Boross — see the Boross family (https://youtu.be/8Mw2Ay4FBSE).",
       "DjangoBooks 2005 adds chairs Tcha’s site does not name (Storro, Jan, Sas van Gent). Those are listed under Later. Whether Fapy is uncle or cousin also is listed under Later. Ferret of Paris is a different family. Living dates: Gypsy Jazz Hub.",
       "On 9 December 2020 Tcha uploaded a clean transfer of Hankó Ferenc (brács) and Boross Lajos (violin). A home tape from a Dutch tour in the 1960s, Limberger believes. He writes that hearing it made him go to Budapest to learn the style. The Boross family holds that recording. This family stays Manouche.",
     ],
@@ -1144,13 +1186,21 @@ export const NEW_SOURCES: {
         used: "Hungary chapter §05 and Cigányzene. Liszt 1859; 1423; 1681 preacher; 1683 noble’s fiddler; Mihály Barna 1737 (Sárosi doubts); verbunkos scale; Rózsavölgyi / Rosenthal 1835; Gyula–Arad 1892; Monti 1904; Dinicu; Bartók 1904–06; Rajkó 1952; State Folk Ensemble 1951; táncház (Timár, Halmos, Sebő, Martin); Muzsikás 1972; Bogyiszló / Kiss János Ökrös 1983 on Later; Tcha Limberger on Magyar nóta. Auto-captions; names checked against this archive.",
       },
       {
+        id: "jimmy-grant-limberger",
+        kind: "video",
+        title: "An Interview with Tcha Limberger (Les Violons De Bruxelles, Tcha Limberger Trio)",
+        credit: "Jimmy Grant",
+        url: "https://youtu.be/CSGObB0WIqw",
+        used: "Hungarian chapter Limberger testimony (nobility-hire telling, fado, both village and nóta, band chairs). Holland–Hungary: Western “Hungarian” ≠ Budapest book. Gypsy jazz: Django kept separate. Transmission: local repertoire or no money (Transylvania Hungarian and Romanian books). Limberger family. Auto-captions cleaned; names not invented from ASR. Description also points to the Hankó/Boross tape.",
+      },
+      {
         id: "limberger-hanko-boross-2020",
         kind: "video",
         title: "Hanko Ferenc and Boros Lajos",
         credit: "Tcha Limberger",
         year: "2020",
         url: "https://youtu.be/8Mw2Ay4FBSE",
-        used: "Boross family and artist page. Home tape: Hankó Ferenc brács, Boross Lajos violin. Dutch tour, 1960s (“I believe”). Back to back after an argument. Bible for brács players of Magyar nóta. Koen De Cauter’s distorted copy; Edely Pitios; Revox. Upload 9 December 2020. Limberger writes Boros; this archive keeps Boross.",
+        used: "Boross family and artist page. Home tape: Hankó Ferenc brács, Boross Lajos violin. Dutch tour, 1960s (“I believe”). Back to back after an argument. Bible for brács players of Magyar nóta. Koen De Cauter’s distorted copy; Edely Pitios; Revox. Upload 9 December 2020. Limberger writes Boros; this archive keeps Boross. Cross-linked from the Limberger family and the Hungarian testimony block.",
       },
       {
         id: "arcanum-bihari",

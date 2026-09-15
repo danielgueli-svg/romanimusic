@@ -147,6 +147,16 @@ export const NL_CHAPTERS_MORE: Record<string, ChapterPack> = {
           "De spelers zelf speelden al nóta, operatunes, walsen en wat de betalende tafel vroeg. Een levende band is een bibliotheek, geen museumetiket. IMSLP houdt de publiek-domein Liszt-rapsodieën en Brahms-dansen — receptiegeschiedenis, geen veldtraditie.",
         ],
       },
+      "limberger-nota": {
+        title: "Limberger over Magyar nóta (getuigenis van een muzikant)",
+        paragraphs: [
+          "Tcha Limberger (Belgische Manouche; familie Limberger in dit archief) beschrijft Magyar nóta vanuit de caféstoel in Boedapest waar hij heen ging om te leren — niet vanaf Westerse Manouche-menukaarten. Jimmy Grant-interview, https://youtu.be/CSGObB0WIqw. Dit is getuigenis van één muzikant. Zij zit naast Sárosi, Gelbart en The Fiddle Channel. Zij vervangt hen niet.",
+          "Bezetting. Primás-viool; een tweede viool op binnenstemmen en dubbelgrepen; brács (altviool / kontra — het akkoordritme dat vaak in de textuur verdwijnt tot het stopt en de band gehalveerd voelt); cimbalom met hamers; contrabas; cello; vaak klarinet. Hij wijst naar een huistape van Hankó Ferenc (brács) / Boross Lajos (viool) als leskopie voor brács-spelers — zie de familie Boross. De tape zelf is daar ingediend (https://youtu.be/8Mw2Ay4FBSE).",
+          "Hoe het boek gemaakt werd, in zijn vertelling. In de negentiende eeuw wilde de Hongaarse adel een nationale bovenklassemuziek — niet Weens / Mozart, niet boerendorpslied. Zij huurden Romani-muzikanten en lieten hen klassiek trainen om de nieuwe stijl te spelen. Daarna, zegt hij, zijn het Romani-professionals die haar spelen. Gevraagd of dat het “Gypsy music” maakt, legt hij het etiket niet vast.",
+          "Twee onrechtvaardigheden. Bartók en Kodály sloegen alarm toen nóta het dorpslied verdrong — hij is het eens dat het dorp verliezen jammer zou zijn. Vandaag noemen puristen nóta “kunstmatige folk.” Hij vergelijkt Portugese fado: ook gecomponeerd en stedelijk, geen duizendjarig dorpslied, en toch niet zo weggezet. Hij houdt van beide: dorpsmuziek en Magyar nóta.",
+          "Magyar nóta = Hongaars lied, gebouwd met klassieke viool- / bas- / cello- / klarinettechniek tot een folklore-achtige publieke klank.",
+        ],
+      },
       lakatos: {
         title: "De families Lakatos",
         paragraphs: [
