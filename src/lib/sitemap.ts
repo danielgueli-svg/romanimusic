@@ -3,6 +3,8 @@ import { SITE_ORIGIN } from "./site";
 
 const STATIC = [
   "/",
+  "/archive",
+  "/booking",
   "/history",
   "/history/timeline",
   "/history/culture",
