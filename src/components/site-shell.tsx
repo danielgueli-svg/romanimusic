@@ -10,7 +10,10 @@ export function SiteShell({ children }: { children: ReactNode }) {
   const { t } = useI18n();
   const path = useRouterState({ select: (s) => s.location.pathname });
   const onSources = path === "/sources";
-  const onHome = path === "/";
+  const onPortal = path === "/";
+  const onArchive = path === "/archive";
+  const onBooking = path === "/booking";
+  const hideSourcesBar = onSources || onPortal || onArchive || onBooking;
 
   return (
     <div className="flex min-h-dvh flex-col bg-paper text-ink">
@@ -25,7 +28,7 @@ export function SiteShell({ children }: { children: ReactNode }) {
       <main id="main" className="flex-1">
         {children}
       </main>
-      {onSources || onHome ? null : <SourcesBar />}
+      {hideSourcesBar ? null : <SourcesBar />}
       <SiteFooter />
     </div>
   );

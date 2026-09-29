@@ -10,6 +10,8 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as ArchiveRouteImport } from './routes/archive'
+import { Route as BookingRouteImport } from './routes/booking'
 import { Route as ConcertsRouteImport } from './routes/concerts'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as DonateRouteImport } from './routes/donate'
@@ -33,6 +35,16 @@ import { Route as StylesSlugRouteImport } from './routes/styles/$slug'
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ArchiveRoute = ArchiveRouteImport.update({
+  id: '/archive',
+  path: '/archive',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BookingRoute = BookingRouteImport.update({
+  id: '/booking',
+  path: '/booking',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ConcertsRoute = ConcertsRouteImport.update({
@@ -133,6 +145,8 @@ const StylesSlugRoute = StylesSlugRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/archive': typeof ArchiveRoute
+  '/booking': typeof BookingRoute
   '/concerts': typeof ConcertsRoute
   '/contact': typeof ContactRoute
   '/donate': typeof DonateRoute
@@ -155,6 +169,8 @@ export interface FileRoutesByFullPath {
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/archive': typeof ArchiveRoute
+  '/booking': typeof BookingRoute
   '/concerts': typeof ConcertsRoute
   '/contact': typeof ContactRoute
   '/donate': typeof DonateRoute
@@ -178,6 +194,8 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/archive': typeof ArchiveRoute
+  '/booking': typeof BookingRoute
   '/concerts': typeof ConcertsRoute
   '/contact': typeof ContactRoute
   '/donate': typeof DonateRoute
@@ -202,6 +220,8 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/archive'
+    | '/booking'
     | '/concerts'
     | '/contact'
     | '/donate'
@@ -224,6 +244,8 @@ export interface FileRouteTypes {
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/archive'
+    | '/booking'
     | '/concerts'
     | '/contact'
     | '/donate'
@@ -246,6 +268,8 @@ export interface FileRouteTypes {
   id:
     | '__root__'
     | '/'
+    | '/archive'
+    | '/booking'
     | '/concerts'
     | '/contact'
     | '/donate'
@@ -269,6 +293,8 @@ export interface FileRouteTypes {
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  ArchiveRoute: typeof ArchiveRoute
+  BookingRoute: typeof BookingRoute
   ConcertsRoute: typeof ConcertsRoute
   ContactRoute: typeof ContactRoute
   DonateRoute: typeof DonateRoute
@@ -297,6 +323,20 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/archive': {
+      id: '/archive'
+      path: '/archive'
+      fullPath: '/archive'
+      preLoaderRoute: typeof ArchiveRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/booking': {
+      id: '/booking'
+      path: '/booking'
+      fullPath: '/booking'
+      preLoaderRoute: typeof BookingRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/concerts': {
@@ -437,6 +477,8 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  ArchiveRoute: ArchiveRoute,
+  BookingRoute: BookingRoute,
   ConcertsRoute: ConcertsRoute,
   ContactRoute: ContactRoute,
   DonateRoute: DonateRoute,
@@ -460,12 +502,3 @@ const rootRouteChildren: RootRouteChildren = {
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { createStart } from '@tanstack/react-start'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-  }
-}
