@@ -1,10 +1,12 @@
-import type { ReactNode } from "react";
+import { useEffect, type ReactNode } from "react";
 import { useRouterState } from "@tanstack/react-router";
 import { JsonLd, siteGraph } from "@/components/json-ld";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import { SourcesBar } from "@/components/sources-bar";
 import { useI18n } from "@/i18n/provider";
+import { isBookingPath } from "@/lib/site";
+import { cn } from "@/lib/utils";
 
 export function SiteShell({ children }: { children: ReactNode }) {
   const { t } = useI18n();
@@ -12,11 +14,16 @@ export function SiteShell({ children }: { children: ReactNode }) {
   const onSources = path === "/sources";
   const onPortal = path === "/";
   const onArchive = path === "/archive";
-  const onBooking = path === "/booking";
+  const onBooking = isBookingPath(path);
   const hideSourcesBar = onSources || onPortal || onArchive || onBooking;
 
+  useEffect(() => {
+    document.documentElement.classList.toggle("theme-booking", onBooking);
+    return () => document.documentElement.classList.remove("theme-booking");
+  }, [onBooking]);
+
   return (
-    <div className="flex min-h-dvh flex-col bg-paper text-ink">
+    <div className={cn("flex min-h-dvh flex-col bg-paper text-ink", onBooking && "theme-booking")}>
       <JsonLd data={siteGraph()} />
       <a
         href="#main"

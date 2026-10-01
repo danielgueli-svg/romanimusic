@@ -45,11 +45,9 @@ function PortalHome() {
             <li>
               <Link
                 to="/booking"
-                className="flex min-h-44 flex-col border border-rule bg-panel/50 p-6 no-underline transition-colors hover:border-accent"
+                className="flex min-h-44 flex-col border border-booking/55 bg-panel/50 p-6 no-underline transition-colors hover:border-booking hover:bg-booking/5"
               >
-                <span className="text-[11px] uppercase tracking-[0.22em] text-muted">
-                  Agency
-                </span>
+                <span className="text-[11px] uppercase tracking-[0.22em] text-booking">Agency</span>
                 <span className="mt-3 font-display text-2xl text-ink sm:text-3xl">
                   Romani music international booking agency
                 </span>

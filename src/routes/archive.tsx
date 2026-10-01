@@ -62,6 +62,28 @@ function Home() {
               {t("home.festivalsCta")}
             </Link>
           </div>
+          <nav
+            aria-label={t("nav.archive")}
+            className="mt-10 flex flex-wrap gap-x-6 gap-y-2 border-t border-rule pt-6 text-sm"
+          >
+            {(
+              [
+                { to: "/history" as const, label: t("nav.history") },
+                { to: "/styles" as const, label: t("nav.styles") },
+                { to: "/families" as const, label: t("nav.families") },
+                { to: "/artists" as const, label: t("nav.artists") },
+                { to: "/events" as const, label: t("nav.events") },
+              ] as const
+            ).map((item) => (
+              <Link
+                key={item.to}
+                to={item.to}
+                className="text-ink/80 no-underline underline-offset-4 hover:text-accent hover:underline"
+              >
+                {item.label}
+              </Link>
+            ))}
+          </nav>
         </div>
       </section>
 
