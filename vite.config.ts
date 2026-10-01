@@ -170,7 +170,9 @@ export default defineConfig(({ command, isPreview }) => ({
     ...(command === "build" || isPreview
       ? [
           nitro({
-            preset: "vercel",
+            // Default Vercel for Grok preview builds. Set GROK_CF_WORKER=1 to
+            // emit a Cloudflare Worker module (+ assets) for tip↔live ships.
+            preset: process.env.GROK_CF_WORKER === "1" ? "cloudflare_module" : "vercel",
             // Auto-registers server/middleware/* (the PWA install page +
             // manifest + head-tag middleware). Nitro v3 defaults serverDir to
             // false, so removing this silently unwires /?install=1 on deploys.
