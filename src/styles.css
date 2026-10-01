@@ -15,11 +15,35 @@
   --color-panel: #eee6d8;
   --color-ink: #1a1410;
   --color-rule: #d4c6b4;
+  --color-booking: #1a4f8b;
+  --color-booking-ink: #122033;
+  --color-booking-paper: #eef3f8;
+  --color-booking-panel: #e4edf5;
+  --color-booking-rule: #c5d3e0;
+  --color-booking-muted: #4c6278;
 
   --font-display: "Fraunces", "Iowan Old Style", "Palatino Linotype", serif;
   --font-sans: "Source Sans 3", "Source Sans Pro", ui-sans-serif, system-ui, sans-serif;
 
   --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+html.theme-booking,
+.theme-booking {
+  --color-bg: var(--color-booking-paper);
+  --color-surface: var(--color-booking-panel);
+  --color-raised: var(--color-booking-paper);
+  --color-fg: var(--color-booking-ink);
+  --color-muted: var(--color-booking-muted);
+  --color-faint: var(--color-booking-muted);
+  --color-border: var(--color-booking-rule);
+  --color-accent: var(--color-booking);
+  --color-accent-fg: var(--color-booking-paper);
+  --color-mark: var(--color-booking);
+  --color-paper: var(--color-booking-paper);
+  --color-panel: var(--color-booking-panel);
+  --color-ink: var(--color-booking-ink);
+  --color-rule: var(--color-booking-rule);
 }
 
 @layer base {

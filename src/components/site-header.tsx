@@ -1,20 +1,18 @@
-import { Link } from "@tanstack/react-router";
+import { Link, useRouterState } from "@tanstack/react-router";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import { useI18n } from "@/i18n/provider";
 import { LOCALE_META, isLocale, type Locale } from "@/i18n/locales";
+import { BOOKING_AGENCY_TITLE, isBookingPath } from "@/lib/site";
 import { cn } from "@/lib/utils";
 
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
   const { t } = useI18n();
+  const path = useRouterState({ select: (s) => s.location.pathname });
+  const booking = isBookingPath(path);
 
   const nav = [
-    { to: "/history" as const, label: t("nav.history") },
-    { to: "/styles" as const, label: t("nav.styles") },
-    { to: "/families" as const, label: t("nav.families") },
-    { to: "/artists" as const, label: t("nav.artists") },
-    { to: "/events" as const, label: t("nav.events") },
     { to: "/foundation" as const, label: t("nav.foundation") },
     { to: "/contact" as const, label: t("nav.contact") },
   ] as const;
@@ -36,17 +34,27 @@ export function SiteHeader() {
           className="mx-auto block text-center no-underline"
           onClick={() => setOpen(false)}
         >
-          <span className="sr-only">Romani Music</span>
-          <span className="inline-flex flex-col items-center">
-            <span className="block h-px w-full bg-ink/80" />
-            <span className="mt-2 font-display text-[2.35rem] leading-[0.92] tracking-[0.06em] text-ink sm:text-5xl md:text-6xl">
-              ROMANI
+          {booking ? null : <span className="sr-only">Romani Music</span>}
+          {booking ? (
+            <span className="inline-flex w-full max-w-3xl flex-col items-center px-11 md:px-0">
+              <span className="block h-px w-full bg-ink/80" />
+              <span className="mt-2 text-balance font-display text-[1.65rem] leading-[1.05] tracking-[0.01em] text-ink sm:text-4xl md:text-5xl">
+                {BOOKING_AGENCY_TITLE}
+              </span>
+              <span className="mt-2 block h-px w-full bg-ink/80" />
             </span>
-            <span className="font-display text-[2.35rem] leading-[0.92] tracking-[0.06em] text-ink sm:text-5xl md:text-6xl">
-              MUSIC
+          ) : (
+            <span className="inline-flex flex-col items-center">
+              <span className="block h-px w-full bg-ink/80" />
+              <span className="mt-2 font-display text-[2.35rem] leading-[0.92] tracking-[0.06em] text-ink sm:text-5xl md:text-6xl">
+                ROMANI
+              </span>
+              <span className="font-display text-[2.35rem] leading-[0.92] tracking-[0.06em] text-ink sm:text-5xl md:text-6xl">
+                MUSIC
+              </span>
+              <span className="mt-2 block h-px w-full bg-ink/80" />
             </span>
-            <span className="mt-2 block h-px w-full bg-ink/80" />
-          </span>
+          )}
         </Link>
         <div className="mt-3 flex justify-center">
           <LangSwitch />
