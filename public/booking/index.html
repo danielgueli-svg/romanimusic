@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <base href="/booking/">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Romani Music Booking</title>
+  <meta name="description" content="Amsterdam booking desk for the Brady Winterstein Trio, the Marcia Bamberg Swing Quartet, the Daniel Gueli Swing Orchestra, and the Django Rosenberg Trio.">
+  <meta name="theme-color" content="#000000">
+  <meta property="og:title" content="Romani Music Booking">
+  <meta property="og:description" content="Three acts, one desk. Enquire at info@romanimusic.com.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600&family=Oswald:wght@500;600;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "EntertainmentBusiness",
+    "name": "Romani Music International Booking Agency",
+    "description": "Amsterdam booking desk for three swing and jazz manouche acts.",
+    "email": "info@romanimusic.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Amsterdam",
+      "addressCountry": "NL"
+    }
+  }
+  </script>
+</head>
+<body class="home" data-title-key="title.home">
+  <a class="skip" href="#main" data-i18n="skip">Skip to content</a>
+  <header class="site-header">
+    <div class="header-bar">
+      <a class="brand" href="https://romanimusic.com/booking/">
+        <img class="brand-mark" src="assets/logo-rm-white.svg" width="288" height="288" alt="">
+        <span class="brand-text">
+          <span class="brand-title"><span class="brand-kicker" data-i18n="brand.kicker">Romani Music</span> <span class="brand-name" data-i18n="brand.name">Booking</span></span>
+          <span class="brand-agency" data-i18n="footer.name">Romani Music International Booking Agency</span>
+        </span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span class="nav-toggle-bar" aria-hidden="true"></span>
+        <span class="sr-only" data-i18n="nav.open">Open menu</span>
+      </button>
+      <img class="mobile-logo" src="assets/logo-rm-white.svg" width="288" height="288" alt="">
+      <nav id="site-nav" class="site-nav" data-i18n-aria="nav.primary" aria-label="Primary">
+        <ul>
+          <li><a href="https://romanimusic.com/booking/#roster" data-i18n="nav.roster">Artists</a></li>
+          <li><a href="about.html" data-i18n="nav.about">About the Agency</a></li>
+          <li><a href="booking.html" data-i18n="nav.booking">Booking</a></li>
+          <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+          <li><a class="slab-link" href="booking.html" data-i18n="nav.bookAct">Book an act</a></li>
+        </ul>
+      </nav>
+      <div class="lang-block">
+        <button type="button" class="lang-flag" aria-expanded="false" aria-controls="lang-switch" data-i18n-aria="lang.group" aria-label="Language">
+          <img src="assets/flag-en.svg" width="56" height="28" alt="">
+        </button>
+      <div class="lang-switch" id="lang-switch" role="group" data-i18n-aria="lang.group" aria-label="Language">
+        <button type="button" data-lang="en" lang="en" aria-pressed="true" aria-label="English"><img src="assets/flag-en.svg" width="28" height="14" alt=""></button>
+        <button type="button" data-lang="nl" lang="nl" aria-pressed="false" aria-label="Nederlands"><img src="assets/flag-nl.svg" width="28" height="14" alt=""></button>
+        <button type="button" data-lang="fr" lang="fr" aria-pressed="false" aria-label="Français"><img src="assets/flag-fr.svg" width="28" height="14" alt=""></button>
+        <button type="button" data-lang="it" lang="it" aria-pressed="false" aria-label="Italiano"><img src="assets/flag-it.svg" width="28" height="14" alt=""></button>
+        <button type="button" data-lang="es" lang="es" aria-pressed="false" aria-label="Español"><img src="assets/flag-es.svg" width="28" height="14" alt=""></button>
+        <button type="button" data-lang="de" lang="de" aria-pressed="false" aria-label="Deutsch"><img src="assets/flag-de.svg" width="28" height="14" alt=""></button>
+        <button type="button" data-lang="ja" lang="ja" aria-pressed="false" aria-label="日本語"><img src="assets/flag-ja.svg" width="28" height="14" alt=""></button>
+        <button type="button" data-lang="zh" lang="zh" aria-pressed="false" aria-label="中文"><img src="assets/flag-zh.svg" width="28" height="14" alt=""></button>
+        <button type="button" data-lang="hu" lang="hu" aria-pressed="false" aria-label="Magyar"><img src="assets/flag-hu.svg" width="28" height="14" alt=""></button>
+        <button type="button" data-lang="pl" lang="pl" aria-pressed="false" aria-label="Polski"><img src="assets/flag-pl.svg" width="28" height="14" alt=""></button>
+        <button type="button" data-lang="hr" lang="hr" aria-pressed="false" aria-label="Hrvatski"><img src="assets/flag-hr.svg" width="28" height="14" alt=""></button>
+        <button type="button" data-lang="sr" lang="sr" aria-pressed="false" aria-label="Srpski"><img src="assets/flag-sr.svg" width="28" height="14" alt=""></button>
+      </div>
+      </div>
+    </div>
+  </header>
+  <main id="main">
+    <section class="stage" id="roster" data-act="brady">
+      <div class="stage-media" aria-hidden="true">
+        <img class="stage-photo stage-photo--brady" src="assets/brady-winterstein-djangofestivalen-2017.jpg" alt="" width="900" height="663">
+        <img class="stage-photo stage-photo--marcia" src="assets/marcia-bamberg-portrait.jpg" alt="" width="1367" height="2048">
+        <img class="stage-photo stage-photo--daniel" src="assets/daniel-gueli-front.jpg" alt="" width="1074" height="1600">
+        <img class="stage-photo stage-photo--django" src="assets/django-rosenberg.jpg" alt="" width="1507" height="2002">
+        <div class="stage-video" data-stage-video></div>
+        <div class="stage-scrim"></div>
+      </div>
+      <h2 class="stage-kicker" data-i18n="roster.title">Artists</h2>
+      <ol class="name-list">
+        <li>
+          <a class="name-link" data-act="brady" href="#brady-winterstein-trio">
+            <span class="name-text" data-i18n="act.brady.name">Brady Winterstein Trio</span>
+          </a>
+        </li>
+        <li>
+          <a class="name-link" data-act="django" href="#django-rosenberg-trio">
+            <span class="name-text" data-i18n="act.django.name">Django Rosenberg Trio</span>
+          </a>
+        </li>
+        <li>
+          <a class="name-link" data-act="marcia" href="#marcia-bamberg-swing-quartet">
+            <span class="name-text" data-i18n="act.marcia.name">Marcia Bamberg Swing Quartet / Quintet</span>
+          </a>
+        </li>
+        <li>
+          <a class="name-link" data-act="daniel" href="#daniel-gueli-swing-orchestra">
+            <span class="name-text" data-i18n="act.daniel.name">Daniel Gueli Swing Orchestra</span>
+          </a>
+        </li>
+      </ol>
+      <a class="stage-mail" href="#enquire" data-i18n="act.enquire">Enquire</a>
+      <p class="stage-credit">
+        <span data-i18n="act.brady.caption">Oslo, 21 January 2017. Photo: Tore Sætre, CC BY-SA 4.0.</span>
+        <a href="https://commons.wikimedia.org/wiki/File:Brady_Winterstein_Cosmopolite_Djangofestivalen_(220932).jpg" rel="noopener noreferrer">Wikimedia</a>
+        <a href="https://creativecommons.org/licenses/by-sa/4.0/" rel="noopener noreferrer">CC BY-SA 4.0</a>
+      </p>
+    </section>
+
+    <div class="sheet">
+      <article class="slab slab--rust" id="brady-winterstein-trio">
+        <div>
+          <p class="kicker" data-i18n="act.brady.format">Jazz manouche · trio</p>
+          <h2 data-i18n="act.brady.name">Brady Winterstein Trio</h2>
+          <p class="lineup"><strong data-i18n="act.lineupLabel">Lineup</strong> <span data-i18n="act.brady.lineup">Brady Winterstein, lead guitar; Nucky Basile, rhythm guitar; Daniel Gueli, double bass.</span></p>
+          <p class="desc desc--clamp" tabindex="0" data-i18n="act.brady.desc">Brady Winterstein is a gypsy-jazz guitarist from Forbach, and the nephew of Hono Winterstein. In 2011, at 17, he made his first album, Happy Together, on Plus Loin Music, with Hono on rhythm guitar. The record keeps the manouche swing and brings in pop songs from the 1970s. He has played the Django Reinhardt Festival in Samois-sur-Seine, Jazz à Vienne, and Djangofestivalen at Cosmopolite in Oslo. He has played the Django Reinhardt Festival in Saint-Marcellin, and in Fontainebleau, where that festival is held now.</p>
+          <div class="slab-actions">
+            <a class="slab-link" href="booking.html?artist=brady-winterstein-trio" data-i18n="act.enquire" data-i18n-aria="act.brady.enquireLabel" aria-label="Enquire about the Brady Winterstein Trio">Enquire</a>
+            <a class="slab-link" href="brady-winterstein-trio.html" data-i18n="more.info">More information</a>
+          </div>
+        </div>
+        <div>
+          <figure class="slab-figure">
+            <img src="assets/brady-winterstein-djangofestivalen-2017.jpg" width="900" height="663" data-i18n-alt="act.brady.photoAlt" alt="The Brady Winterstein Trio on stage at Cosmopolite in Oslo, January 2017.">
+            <figcaption>
+              <span data-i18n="act.brady.caption">Oslo, 21 January 2017. Photo: Tore Sætre, CC BY-SA 4.0.</span>
+              <a href="https://commons.wikimedia.org/wiki/File:Brady_Winterstein_Cosmopolite_Djangofestivalen_(220932).jpg" rel="noopener noreferrer">Wikimedia</a>
+              <a href="https://creativecommons.org/licenses/by-sa/4.0/" rel="noopener noreferrer">CC BY-SA 4.0</a>
+            </figcaption>
+          </figure>
+        </div>
+        <div class="slab-film">
+          <div class="embed">
+            <iframe loading="lazy" src="https://www.youtube-nocookie.com/embed/c-XCAkfbds0" title="Brady Winterstein Trio — Happy Together, Finland 2013." data-i18n-title="media.brady" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
+          <p class="embed-note"><span data-i18n="media.watch">Film</span> — <span data-i18n="media.brady">Brady Winterstein Trio — Happy Together, Finland 2013.</span></p>
+        </div>
+      </article>
+
+<article class="slab slab--rust" id="django-rosenberg-trio">
+        <div>
+          <p class="kicker" data-i18n="act.django.format">Jazz manouche · trio</p>
+          <h2 data-i18n="act.django.name">Django Rosenberg Trio</h2>
+          <p class="lineup"><strong data-i18n="act.lineupLabel">Lineup</strong> <span data-i18n="act.django.lineup">Django Rosenberg, lead guitar; Noekie Basily, rhythm guitar; Daniel Gueli, double bass.</span></p>
+          <p class="desc" data-i18n="act.django.desc">Django Rosenberg is a Sinti gypsy-jazz guitarist of the Rosenberg family. He leads a trio with Noekie Basily on rhythm guitar and Daniel Gueli on double bass. They played the Gypsy Festival in Tilburg on 22 August 2026.</p>
+          <div class="slab-actions">
+            <a class="slab-link" href="booking.html?artist=django-rosenberg-trio" data-i18n="act.enquire" data-i18n-aria="act.django.enquireLabel" aria-label="Enquire about the Django Rosenberg Trio">Enquire</a>
+            <a class="slab-link" href="django-rosenberg-trio.html" data-i18n="more.info">More information</a>
+          </div>
+        </div>
+        <div>
+          <figure class="slab-figure">
+            <img src="assets/django-rosenberg.jpg" width="1507" height="2002" data-i18n-alt="act.django.photoAlt" alt="Django Rosenberg seated with a guitar.">
+            <figcaption>
+              <span data-i18n="act.django.caption">Django Rosenberg.</span>
+            </figcaption>
+          </figure>
+        </div>
+        <div class="slab-film">
+          <div class="embed">
+            <iframe loading="lazy" src="https://www.youtube-nocookie.com/embed/LXZhWTnTE0c" title="Django Rosenberg Trio — Them There Eyes, Gypsy Festival Tilburg 2026." data-i18n-title="media.django" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
+          <p class="embed-note"><span data-i18n="media.watch">Film</span> — <span data-i18n="media.django">Django Rosenberg Trio — Them There Eyes, Gypsy Festival Tilburg 2026.</span></p>
+        </div>
+      </article>
+
+<article class="slab slab--wine" id="marcia-bamberg-swing-quartet">
+        <div>
+          <p class="kicker" data-i18n="act.marcia.format">Swing · vocals · quartet</p>
+          <h2 data-i18n="act.marcia.name">Marcia Bamberg Swing Quartet / Quintet</h2>
+          <p class="lineup"><strong data-i18n="act.lineupLabel">Lineup</strong></p>
+          <ul class="people">
+            <li data-from="4">Marcia Bamberg, vocals</li>
+            <li data-from="4">John Ligthart, solo guitar</li>
+            <li data-from="4">Ronald Weel, rhythm guitar</li>
+            <li data-from="4">Daniel Gueli, double bass</li>
+            <li data-from="4">Christiaan van Hemert, violin</li>
+          </ul>
+          <p class="desc" data-i18n="act.marcia.desc">French and English swing songs, with the voice in the set, for concerts, festivals, and private concerts since 2018.</p>
+          <p class="desc" data-i18n="act.marcia.quintet">The group can also be booked as a quintet with Christiaan van Hemert on violin. He plays as a guest with the Rosenberg Trio, and he made the La Pompe Live app.</p>
+          <div class="slab-actions">
+            <a class="slab-link" href="booking.html?artist=marcia-bamberg-swing-quartet" data-i18n="act.enquire" data-i18n-aria="act.marcia.enquireLabel" aria-label="Enquire about the Marcia Bamberg Swing Quartet">Enquire</a>
+            <a class="slab-link" href="marcia-bamberg.html" data-i18n="more.info">More information</a>
+          </div>
+        </div>
+        <div>
+          <figure class="slab-figure">
+            <img src="assets/marcia-bamberg-portrait.jpg" width="1367" height="2048" data-i18n-alt="act.marcia.photoAlt" alt="Marcia Bamberg seated with a vintage microphone.">
+            <figcaption>
+              <span data-i18n="act.marcia.caption">Marcia Bamberg. Agency portrait.</span>
+            </figcaption>
+          </figure>
+        </div>
+        <div class="slab-film">
+          <div class="embed">
+            <iframe loading="lazy" src="https://www.youtube-nocookie.com/embed/-8NO05pyltM" title="Marcia Bamberg Swing Quartet — Que reste-t-il de nos amours." data-i18n-title="media.marcia" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
+          <p class="embed-note"><span data-i18n="media.watch">Film</span> — <span data-i18n="media.marcia">Marcia Bamberg Swing Quartet — Que reste-t-il de nos amours.</span></p>
+        </div>
+      </article>
+
+<article class="slab slab--ink" id="daniel-gueli-swing-orchestra">
+        <div>
+          <p class="kicker" data-i18n="act.daniel.format">Swing orchestra · Amsterdam</p>
+          <h2 data-i18n="act.daniel.name">Daniel Gueli Swing Orchestra</h2>
+          <p class="desc">Daniel leading his own swing orchestra, an all-star orchestra of famous players.</p>
+          <p class="lineup"><strong data-i18n="act.lineupLabel">Lineup</strong></p>
+          <ul class="people">
+            <li>Gismo Graf, guitar</li>
+            <li><img src="assets/brady-winterstein-djangofestivalen-2017.jpg" width="64" height="64" alt="">Brady Winterstein, guitar</li>
+            <li>Fabio Marziali, reeds</li>
+            <li>Jonn Reyna, piano</li>
+            <li>Sven Rozier, drums</li>
+            <li><img src="assets/daniel-gueli-front.jpg" width="64" height="64" alt="">Daniel Gueli, double bass</li>
+          </ul>
+          <div class="slab-actions">
+            <a class="slab-link" href="booking.html?artist=daniel-gueli-swing-orchestra" data-i18n="act.enquire" data-i18n-aria="act.daniel.enquireLabel" aria-label="Enquire about the Daniel Gueli Swing Orchestra">Enquire</a>
+            <a class="slab-link" href="daniel-gueli-swing-orchestra.html" data-i18n="more.info">More information</a>
+          </div>
+        </div>
+        <div>
+          <figure class="slab-figure">
+            <img src="assets/daniel-gueli-front.jpg" width="1074" height="1600" data-i18n-alt="act.daniel.photoAlt" alt="Daniel Gueli standing with a double bass.">
+            <figcaption>
+              <span data-i18n="act.daniel.caption">Daniel Gueli.</span>
+            </figcaption>
+          </figure>
+        </div>
+      </article>
+
+    </div>
+
+
+  </main>
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div>
+        <a class="footer-logo" href="/booking/login"><img src="assets/logo-rm-white.svg" width="128" height="128" alt="Romani Music"></a>
+        <p class="footer-name" data-i18n="footer.name">Romani Music International Booking Agency</p>
+      </div>
+      <nav class="footer-nav" data-i18n-aria="footer.nav" aria-label="Footer">
+        <a href="https://romanimusic.com/booking/#roster" data-i18n="nav.roster">Artists</a>
+        <a href="about.html" data-i18n="nav.about">About the Agency</a>
+        <a href="booking.html" data-i18n="nav.booking">Booking</a>
+        <a href="contact.html" data-i18n="nav.contact">Contact</a>
+      </nav>
+      <a class="slab-link" href="booking.html" data-i18n="nav.bookAct">Book an act</a>
+    </div>
+  </footer>
+  <script>
+  (function () {
+    var root = document.getElementById("marcia-bamberg-swing-quartet");
+    if (!root) return;
+    var buttons = root.querySelectorAll("[data-size]");
+    function apply(n) {
+      root.querySelectorAll("[data-from]").forEach(function (el) {
+        el.hidden = Number(el.getAttribute("data-from")) > n;
+      });
+      buttons.forEach(function (b) {
+        b.setAttribute("aria-pressed", b.getAttribute("data-size") === String(n) ? "true" : "false");
+      });
+    }
+    buttons.forEach(function (b) {
+      b.addEventListener("click", function () { apply(Number(b.getAttribute("data-size"))); });
+    });
+    apply(4);
+  })();
+  </script>
+  <script src="js/i18n.js"></script>
+  <script src="js/site.js"></script>
+  <script src="js/booking-form.js"></script>
+</body>
+</html>

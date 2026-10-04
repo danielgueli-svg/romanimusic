@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /later
+Disallow: /concerts
+
+Sitemap: https://romanimusic.com/sitemap.xml

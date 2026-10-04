@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <base href="/booking/">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Django Rosenberg Trio — Romani Music Booking</title>
+  <meta name="description" content="Django Rosenberg Trio. Jazz manouche trio.">
+  <meta name="theme-color" content="#000000">
+  <meta property="og:title" content="Django Rosenberg Trio — Romani Music Booking">
+  <meta property="og:description" content="Django Rosenberg Trio. Jazz manouche trio.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600&family=Oswald:wght@500;600;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="page act-page">
+  <a class="skip" href="#main" data-i18n="skip">Skip to content</a>
+  <header class="site-header">
+    <div class="header-bar">
+      <a class="brand" href="https://romanimusic.com/booking/">
+        <img class="brand-mark" src="assets/logo-rm-white.svg" width="288" height="288" alt="">
+        <span class="brand-text">
+          <span class="brand-title"><span class="brand-kicker" data-i18n="brand.kicker">Romani Music</span> <span class="brand-name" data-i18n="brand.name">Booking</span></span>
+          <span class="brand-agency" data-i18n="footer.name">Romani Music International Booking Agency</span>
+        </span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span class="nav-toggle-bar" aria-hidden="true"></span>
+        <span class="sr-only" data-i18n="nav.open">Open menu</span>
+      </button>
+      <img class="mobile-logo" src="assets/logo-rm-white.svg" width="288" height="288" alt="">
+      <nav id="site-nav" class="site-nav" data-i18n-aria="nav.primary" aria-label="Primary">
+        <ul>
+          <li><a href="https://romanimusic.com/booking/#roster" data-i18n="nav.roster">Artists</a></li>
+          <li><a href="about.html" data-i18n="nav.about">About the Agency</a></li>
+          <li><a href="booking.html" data-i18n="nav.booking">Booking</a></li>
+          <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+          <li><a class="slab-link" href="booking.html" data-i18n="nav.bookAct">Book an act</a></li>
+        </ul>
+      </nav>
+      <div class="lang-block">
+        <button type="button" class="lang-flag" aria-expanded="false" aria-controls="lang-switch" data-i18n-aria="lang.group" aria-label="Language">
+          <img src="assets/flag-en.svg" width="56" height="28" alt="">
+        </button>
+        <p class="lang-agency" data-i18n="footer.name">Romani Music International Booking Agency</p>
+      <div class="lang-switch" id="lang-switch" role="group" data-i18n-aria="lang.group" aria-label="Language">
+        <button type="button" data-lang="en" lang="en" aria-pressed="true" aria-label="English"><img src="assets/flag-en.svg" width="28" height="14" alt=""></button>
+        <button type="button" data-lang="nl" lang="nl" aria-pressed="false" aria-label="Nederlands"><img src="assets/flag-nl.svg" width="28" height="14" alt=""></button>
+        <button type="button" data-lang="fr" lang="fr" aria-pressed="false" aria-label="Français"><img src="assets/flag-fr.svg" width="28" height="14" alt=""></button>
+        <button type="button" data-lang="it" lang="it" aria-pressed="false" aria-label="Italiano"><img src="assets/flag-it.svg" width="28" height="14" alt=""></button>
+        <button type="button" data-lang="es" lang="es" aria-pressed="false" aria-label="Español"><img src="assets/flag-es.svg" width="28" height="14" alt=""></button>
+        <button type="button" data-lang="de" lang="de" aria-pressed="false" aria-label="Deutsch"><img src="assets/flag-de.svg" width="28" height="14" alt=""></button>
+        <button type="button" data-lang="ja" lang="ja" aria-pressed="false" aria-label="日本語"><img src="assets/flag-ja.svg" width="28" height="14" alt=""></button>
+        <button type="button" data-lang="zh" lang="zh" aria-pressed="false" aria-label="中文"><img src="assets/flag-zh.svg" width="28" height="14" alt=""></button>
+        <button type="button" data-lang="hu" lang="hu" aria-pressed="false" aria-label="Magyar"><img src="assets/flag-hu.svg" width="28" height="14" alt=""></button>
+        <button type="button" data-lang="pl" lang="pl" aria-pressed="false" aria-label="Polski"><img src="assets/flag-pl.svg" width="28" height="14" alt=""></button>
+        <button type="button" data-lang="hr" lang="hr" aria-pressed="false" aria-label="Hrvatski"><img src="assets/flag-hr.svg" width="28" height="14" alt=""></button>
+        <button type="button" data-lang="sr" lang="sr" aria-pressed="false" aria-label="Srpski"><img src="assets/flag-sr.svg" width="28" height="14" alt=""></button>
+      </div>
+      </div>
+    </div>
+  </header>
+<main id="main">
+    <article class="slab slab--rust" id="django-rosenberg-trio">
+        <div>
+          <p class="kicker" data-i18n="act.django.format">Jazz manouche · trio</p>
+          <h2 data-i18n="act.django.name">Django Rosenberg Trio</h2>
+                    <p class="lineup"><strong data-i18n="act.lineupLabel">Lineup</strong></p>
+          <ul class="people">
+            <li>Django Rosenberg, lead guitar</li>
+            <li>Noekie Basily, rhythm guitar</li>
+            <li>Daniel Gueli, double bass</li>
+          </ul>
+          <p class="desc" data-i18n="act.django.desc">Django Rosenberg is a Sinti gypsy-jazz guitarist of the Rosenberg family. He leads a trio with Noekie Basily on rhythm guitar and Daniel Gueli on double bass. They played the Gypsy Festival in Tilburg on 22 August 2026.</p>
+        </div>
+        <div>
+          <figure class="slab-figure">
+            <img src="assets/django-rosenberg.jpg" width="1507" height="2002" data-i18n-alt="act.django.photoAlt" alt="Django Rosenberg seated with a guitar.">
+            <figcaption>
+              <span data-i18n="act.django.caption">Django Rosenberg.</span>
+            </figcaption>
+          </figure>
+        </div>
+        <div class="slab-film">
+        <div class="embed">
+          <iframe loading="lazy" src="https://www.youtube-nocookie.com/embed/LXZhWTnTE0c" title="Django Rosenberg Trio — Them There Eyes, Gypsy Festival Tilburg 2026." data-i18n-title="media.django" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <p class="embed-note"><span data-i18n="media.watch">Film</span> — <span data-i18n="media.django">Django Rosenberg Trio — Them There Eyes, Gypsy Festival Tilburg 2026.</span></p>
+
+        </div>
+    </article>
+</main>
+<footer class="site-footer">
+    <div class="footer-inner">
+      <div>
+        <a class="footer-logo" href="/booking/login"><img src="assets/logo-rm-white.svg" width="128" height="128" alt="Romani Music"></a>
+        <p class="footer-name" data-i18n="footer.name">Romani Music International Booking Agency</p>
+        <p class="footer-note" data-i18n="footer.note">A three-act booking desk in Amsterdam.</p>
+      </div>
+      <nav class="footer-nav" data-i18n-aria="footer.nav" aria-label="Footer">
+        <a href="https://romanimusic.com/booking/#roster" data-i18n="nav.roster">Artists</a>
+        <a href="about.html" data-i18n="nav.about">About the Agency</a>
+        <a href="booking.html" data-i18n="nav.booking">Booking</a>
+        <a href="contact.html" data-i18n="nav.contact">Contact</a>
+      </nav>
+      <p class="footer-mail"><a href="mailto:info@romanimusic.com">info@romanimusic.com</a></p>
+    </div>
+  </footer>
+  <script src="js/i18n.js"></script>
+  <script src="js/site.js"></script>
+  <script src="js/booking-form.js"></script>
+</body>
+</html>

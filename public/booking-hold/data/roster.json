@@ -1,0 +1,97 @@
+[
+  {
+    "slug": "brady-winterstein-trio",
+    "name": "Brady Winterstein Trio",
+    "kickerKey": "artist.brady.kicker",
+    "summaryKey": "artist.brady.summary",
+    "page": "artists/brady-winterstein-trio.html",
+    "base": "Forbach, Lorraine",
+    "availableFor": [
+      "Concerts",
+      "Festivals",
+      "Private events"
+    ],
+    "photo": "assets/brady-winterstein-djangofestivalen-2017.jpg",
+    "photoCredit": "Photo: Tore Sætre / Wikimedia, CC BY-SA 4.0. Djangofestivalen, Cosmopolite, Oslo, 21 January 2017.",
+    "records": [
+      {
+        "title": "Happy Together",
+        "year": 2011,
+        "label": "Plus Loin Music",
+        "catalog": "PL 4542"
+      },
+      {
+        "title": "Savoir-Vivre",
+        "year": 2013,
+        "bandcamp": "https://wintersteintrio.bandcamp.com/album/savoir-vivre",
+        "spotify": "https://open.spotify.com/album/5Ok4tDaHFI2wmrStHERRN8"
+      }
+    ],
+    "spotifyArtist": "https://open.spotify.com/artist/160PD01L7M0KULOkg9Me0e"
+  },
+  {
+    "slug": "marcia-bamberg-swing-quintet",
+    "name": "Marcia Bamberg Swing Quintet",
+    "kickerKey": "artist.marcia.kicker",
+    "summaryKey": "artist.marcia.summary",
+    "page": "artists/marcia-bamberg-swing-quintet.html",
+    "base": "The Netherlands",
+    "availableFor": [
+      "Concerts",
+      "Festivals",
+      "Private events",
+      "Theater"
+    ],
+    "site": "https://marciabamberg.nl/marcia-bamberg-swing-quintet",
+    "lineup": [
+      "Marcia Bamberg — vocals",
+      "John Ligthart — solo guitar",
+      "Ronald Weel — rhythm guitar",
+      "Daniel Gueli — double bass",
+      "Christian van Heemert — violin"
+    ]
+  },
+  {
+    "slug": "daniel-gueli-gypsy-jazz-orchestra",
+    "name": "Daniel Gueli Gypsy Jazz Orchestra",
+    "kickerKey": "artist.daniel.kicker",
+    "summaryKey": "artist.daniel.summary",
+    "page": "artists/daniel-gueli-gypsy-jazz-orchestra.html",
+    "base": "Amsterdam",
+    "availableFor": [
+      "Concerts",
+      "Festivals",
+      "Private events"
+    ],
+    "photo": "assets/daniel-gueli-front.jpg",
+    "photoCredit": "Front photo from danielgueli.com (owned artist site materials).",
+    "lineup": [
+      "Daniel Gueli — double bass",
+      "Fabio Marziali — alto saxophone / reeds",
+      "Jonn Reyna — piano",
+      "Other chairs — TBC"
+    ]
+  },
+  {
+    "slug": "django-rosenberg-trio",
+    "name": "Django Rosenberg Trio",
+    "kickerKey": "artist.django.kicker",
+    "summaryKey": "artist.django.summary",
+    "page": "artists/django-rosenberg-trio.html",
+    "base": "Amsterdam / Hot Club tradition",
+    "availableFor": [
+      "Concerts",
+      "Festivals",
+      "Private events"
+    ],
+    "photo": "assets/joseph-reinhardt.jpg",
+    "photoCredit": "Photo: User:Polmeccartni / Wikimedia, GFDL 1.2+. Portrait of Joseph Reinhardt.",
+    "lineup": [
+      "Django Rosenberg — guitar",
+      "Stéphane Grappelli — violin",
+      "Joseph Reinhardt — guitar",
+      "Nucky Basile — rhythm guitar",
+      "Daniel Gueli — double bass"
+    ]
+  }
+]

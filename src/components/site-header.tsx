@@ -1,0 +1,187 @@
+import { Link, useRouterState } from "@tanstack/react-router";
+import { Menu, X } from "lucide-react";
+import { useState } from "react";
+import { useI18n } from "@/i18n/provider";
+import { LOCALE_META, isLocale, type Locale } from "@/i18n/locales";
+import { BOOKING_AGENCY_TITLE, isBookingPath } from "@/lib/site";
+import { cn } from "@/lib/utils";
+
+const NAV_LINK =
+  "inline-flex items-center gap-2 text-ink/80 no-underline underline-offset-4 hover:text-accent hover:underline";
+
+type NavItem =
+  | { kind: "route"; to: "/artists" | "/foundation" | "/contact"; labelKey: "nav.artist" | "nav.about" | "nav.contact" }
+  | { kind: "href"; href: string; labelKey: "nav.bookings"; bookingsLogo?: boolean };
+
+export function SiteHeader() {
+  const [open, setOpen] = useState(false);
+  const { t } = useI18n();
+  const path = useRouterState({ select: (s) => s.location.pathname });
+  const booking = isBookingPath(path);
+
+  const nav: NavItem[] = [
+    { kind: "route", to: "/artists", labelKey: "nav.artist" },
+    { kind: "route", to: "/foundation", labelKey: "nav.about" },
+    { kind: "href", href: "/booking/", labelKey: "nav.bookings", bookingsLogo: true },
+    { kind: "route", to: "/contact", labelKey: "nav.contact" },
+  ];
+
+  function renderLabel(item: NavItem) {
+    const label = t(item.labelKey);
+    if (item.kind === "href" && item.bookingsLogo) {
+      return (
+        <>
+          <span className="inline-flex size-7 items-center justify-center rounded-md bg-booking">
+            <img
+              src="/booking/assets/logo-rm-white.svg"
+              alt=""
+              width={18}
+              height={18}
+              className="size-[18px]"
+            />
+          </span>
+          <span>{label}</span>
+        </>
+      );
+    }
+    return (
+      <>
+        <span className="inline-flex size-7 items-center justify-center rounded-md bg-booking">
+          <img
+            src="/booking/assets/logo-rm-white.svg"
+            alt=""
+            width={18}
+            height={18}
+            className="size-[18px]"
+          />
+        </span>
+        <span>{label}</span>
+      </>
+    );
+  }
+
+  return (
+    <header className="border-b border-rule bg-paper">
+      <div className="relative mx-auto max-w-5xl px-5 py-7 sm:py-9">
+        <button
+          type="button"
+          className="absolute right-5 top-7 z-10 inline-flex min-h-11 min-w-11 items-center justify-center text-ink md:hidden"
+          aria-expanded={open}
+          aria-label={open ? t("nav.close") : t("nav.menu")}
+          onClick={() => setOpen((v) => !v)}
+        >
+          {open ? <X className="size-5" /> : <Menu className="size-5" />}
+        </button>
+        <Link
+          to="/"
+          className="mx-auto block text-center no-underline"
+          onClick={() => setOpen(false)}
+        >
+          {booking ? null : <span className="sr-only">Romani Music</span>}
+          {booking ? (
+            <span className="inline-flex w-full max-w-3xl flex-col items-center px-11 md:px-0">
+              <span className="block h-px w-full bg-ink/80" />
+              <span className="mt-2 text-balance font-display text-[1.65rem] leading-[1.05] tracking-[0.01em] text-ink sm:text-4xl md:text-5xl">
+                {BOOKING_AGENCY_TITLE}
+              </span>
+              <span className="mt-2 block h-px w-full bg-ink/80" />
+            </span>
+          ) : (
+            <span className="inline-flex flex-col items-center">
+              <span className="block h-px w-full bg-ink/80" />
+              <span className="mt-2 font-display text-[2.35rem] leading-[0.92] tracking-[0.06em] text-ink sm:text-5xl md:text-6xl">
+                ROMANI
+              </span>
+              <span className="font-display text-[2.35rem] leading-[0.92] tracking-[0.06em] text-ink sm:text-5xl md:text-6xl">
+                MUSIC
+              </span>
+              <span className="mt-2 block h-px w-full bg-ink/80" />
+            </span>
+          )}
+        </Link>
+        <div className="mt-3 flex justify-center">
+          <LangSwitch />
+        </div>
+        <nav
+          aria-label={t("nav.primary")}
+          className="mt-6 hidden flex-wrap justify-center gap-x-5 gap-y-2 text-sm md:flex"
+        >
+          {nav.map((item) =>
+            item.kind === "route" ? (
+              <Link
+                key={item.to}
+                to={item.to}
+                className={NAV_LINK}
+                activeProps={{ className: "text-accent" }}
+                onClick={() => setOpen(false)}
+              >
+                {renderLabel(item)}
+              </Link>
+            ) : (
+              <a key={item.href} href={item.href} className={NAV_LINK} onClick={() => setOpen(false)}>
+                {renderLabel(item)}
+              </a>
+            ),
+          )}
+        </nav>
+      </div>
+      <div className={cn("border-t border-rule md:hidden", open ? "block" : "hidden")}>
+        <nav className="flex flex-col px-5 py-2" aria-label={t("nav.mobile")}>
+          {nav.map((item) =>
+            item.kind === "route" ? (
+              <Link
+                key={`${item.to}-m`}
+                to={item.to}
+                className="flex min-h-11 items-center gap-2 text-sm text-ink no-underline"
+                onClick={() => setOpen(false)}
+              >
+                {renderLabel(item)}
+              </Link>
+            ) : (
+              <a
+                key={`${item.href}-m`}
+                href={item.href}
+                className="flex min-h-11 items-center gap-2 text-sm text-ink no-underline"
+                onClick={() => setOpen(false)}
+              >
+                {renderLabel(item)}
+              </a>
+            ),
+          )}
+        </nav>
+      </div>
+    </header>
+  );
+}
+
+function LangSwitch() {
+  const { locale, setLocale, t } = useI18n();
+  const east = LOCALE_META.filter((l) => l.group === "east");
+  const west = LOCALE_META.filter((l) => l.group === "west");
+  return (
+    <label className="inline-flex min-h-11 items-center gap-2 text-[11px] uppercase tracking-[0.18em] text-muted">
+      <span className="sr-only">{t("lang.label")}</span>
+      <select
+        value={locale}
+        onChange={(e) => {
+          const v = e.target.value;
+          if (isLocale(v)) setLocale(v as Locale);
+        }}
+        className="min-h-11 max-w-[16rem] border border-rule bg-paper px-2 text-center text-[12px] tracking-normal text-ink"
+        aria-label={t("lang.label")}
+      >
+        {east.map((l) => (
+          <option key={l.code} value={l.code}>
+            {l.native}
+          </option>
+        ))}
+        <option disabled>────────</option>
+        {west.map((l) => (
+          <option key={l.code} value={l.code}>
+            {l.native}
+          </option>
+        ))}
+      </select>
+    </label>
+  );
+}

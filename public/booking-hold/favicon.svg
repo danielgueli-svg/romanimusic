@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Romani Music Booking">
+  <rect width="64" height="64" fill="#0b0f16"/>
+  <rect x="3" y="3" width="58" height="58" fill="none" stroke="#d4a45a" stroke-width="2"/>
+  <g fill="none" stroke="#f3ead6" stroke-width="1.6" stroke-linecap="round">
+    <path d="M16 22h32"/>
+    <path d="M16 28h32"/>
+    <path d="M16 34h32"/>
+    <path d="M16 40h32"/>
+  </g>
+  <circle cx="40" cy="28" r="3.2" fill="#d4a45a"/>
+</svg>

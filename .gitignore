@@ -1,0 +1,30 @@
+# deps and caches
+node_modules/
+.tanstack/
+.output/
+.nitro/
+.vercel/
+dist/
+.wrangler/
+
+# sandbox / local
+.grok/
+artifacts/
+screenshots/
+attachments/
+.project_id
+.node_modules.lock
+*.log
+.DS_Store
+AGENTS.md
+
+
+# env and secrets
+.env
+.env.*
+!.env.example
+
+# test / coverage
+coverage/
+playwright-report/
+test-results/

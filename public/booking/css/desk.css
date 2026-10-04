@@ -1,0 +1,191 @@
+.desk-body {
+  margin: 0;
+  background: var(--paper, #f3efe6);
+  color: var(--ink, #14110e);
+  font-family: "Outfit", sans-serif;
+}
+
+.desk-top,
+.desk-card {
+  width: min(42rem, calc(100% - 2rem));
+  margin: 0 auto;
+}
+
+.desk-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 0;
+}
+
+.desk-home,
+.desk-text-button,
+.desk-artist,
+.desk-day {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: 0;
+  cursor: pointer;
+  text-align: left;
+}
+
+.desk-home {
+  color: inherit;
+  text-decoration: none;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 0.78rem;
+}
+
+.desk-card {
+  background: #fff;
+  border: 1px solid rgba(20, 17, 14, 0.12);
+  padding: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.desk-title {
+  margin: 0 0 1rem;
+  font-family: "Oswald", sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  font-size: 2rem;
+}
+
+.desk-field {
+  display: grid;
+  gap: 0.3rem;
+  margin-bottom: 0.8rem;
+}
+
+.desk-field input,
+.desk-note-form textarea {
+  font: inherit;
+  width: 100%;
+  padding: 0.55rem 0.7rem;
+  border: 1px solid rgba(20, 17, 14, 0.3);
+  background: #fff;
+}
+
+.desk-button {
+  font: inherit;
+  background: #000;
+  color: #fff;
+  border: 0;
+  padding: 0.6rem 0.9rem;
+  cursor: pointer;
+}
+
+.desk-button--quiet {
+  margin-top: 0.8rem;
+  background: transparent;
+  color: #000;
+  border: 1px solid #000;
+}
+
+.desk-error {
+  width: min(42rem, calc(100% - 2rem));
+  margin: 0 auto 1rem;
+  color: #8a1f14;
+}
+
+.desk-artists {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.desk-artist {
+  display: block;
+  width: 100%;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid rgba(20, 17, 14, 0.12);
+  font-size: 1.15rem;
+}
+
+.desk-month {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.desk-month-label {
+  margin: 0;
+  font-family: "Oswald", sans-serif;
+  letter-spacing: 0.06em;
+}
+
+.desk-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 0.25rem;
+  margin-top: 0.8rem;
+}
+
+.desk-dow,
+.desk-day {
+  text-align: center;
+  padding: 0.45rem 0;
+}
+
+.desk-dow {
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #5e564c;
+}
+
+.desk-day--noted {
+  background: #e4c56a;
+}
+
+.desk-day--blocked {
+  background: #14110e;
+  color: #fff;
+}
+
+.desk-day--open {
+  outline: 2px solid #a33b28;
+}
+
+.desk-detail {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(20, 17, 14, 0.12);
+}
+
+.desk-date {
+  margin: 0;
+  font-family: "Oswald", sans-serif;
+  font-weight: 500;
+}
+
+.desk-help,
+.desk-blocked,
+.desk-note-text {
+  margin: 0.4rem 0;
+}
+
+.desk-blocked {
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-size: 0.78rem;
+}
+
+.desk-notes {
+  margin: 0.6rem 0;
+  padding-left: 1.1rem;
+}
+
+.desk-note-author {
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.desk-note-form textarea {
+  min-height: 5rem;
+  margin-bottom: 0.6rem;
+}

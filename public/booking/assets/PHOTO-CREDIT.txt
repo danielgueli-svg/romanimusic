@@ -1,0 +1,29 @@
+Artist photos kept for the three-act booking desk
+================================================
+
+1) Brady Winterstein — Djangofestivalen, Cosmopolite, Oslo, 21 January 2017
+File: brady-winterstein-djangofestivalen-2017.jpg
+Page: https://commons.wikimedia.org/wiki/File:Brady_Winterstein_Cosmopolite_Djangofestivalen_(220932).jpg
+Photographer: Tore Sætre
+Credit: Photo: Tore Sætre / Wikimedia
+Photographer site: http://www.setre.net/
+License: Creative Commons Attribution-ShareAlike 4.0 International
+https://creativecommons.org/licenses/by-sa/4.0/
+Caption lineup: Brady Winterstein (guitar), Hono Winterstein (guitar),
+Xavier Nikq (double bass), Martin Weiss (violin).
+Unmodified Wikimedia upload. Keep the credit beside the image.
+
+2) Marcia Bamberg — studio portrait (owned agency materials)
+File: marcia-bamberg-portrait.jpg
+Usage: Romani Music booking materials for the Marcia Bamberg Swing Quartet.
+Do not scrape third-party web copies.
+
+3) Daniel Gueli — portrait with double bass
+File: daniel-gueli-front.jpg
+Usage: front portrait from danielgueli.com, used here for the
+Daniel Gueli Swing Orchestra card.
+
+4) Brand mark
+File: logo-rm-striped.svg
+File: logo-rm-white.svg
+Striped R/M mark drawn for this desk. Not a third-party logo.

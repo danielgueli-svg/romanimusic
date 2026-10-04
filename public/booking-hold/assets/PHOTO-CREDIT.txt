@@ -1,0 +1,70 @@
+Artist photos for /booking roster and band panels
+=================================================
+
+1) Brady Winterstein — Djangofestivalen, Cosmopolite, Oslo, 21 January 2017
+File: brady-winterstein-djangofestivalen-2017.jpg
+Source file name: Brady_Winterstein_Cosmopolite_Djangofestivalen_(220932).jpg
+Page: https://commons.wikimedia.org/wiki/File:Brady_Winterstein_Cosmopolite_Djangofestivalen_(220932).jpg
+Photographer: Tore Sætre
+Credit: Photo: Tore Sætre / Wikimedia
+Photographer site: http://www.setre.net/
+License: Creative Commons Attribution-ShareAlike 4.0 International
+https://creativecommons.org/licenses/by-sa/4.0/
+Caption lineup: Brady Winterstein (guitar), Hono Winterstein (guitar),
+Xavier Nikq (double bass), Martin Weiss (violin).
+Unmodified Wikimedia upload; pages may scale. Keep credit beside the image.
+
+2) Marcia Bamberg — studio portrait (owned agency materials)
+File: marcia-bamberg-portrait.jpg
+Source on box: /workspace/romani-booking-agency/photo-pack/marcia/marcia-portrait.jpg
+Usage: Romani Music International Booking Agency / Marcia Bamberg Swing Quintet
+materials already held for the booking desk. Do not scrape third-party web copies.
+
+3) Daniel Gueli — front portrait with double bass (danielgueli.com)
+File: daniel-gueli-front.jpg
+Source on box: /workspace/danielgueli.com/img/hero.jpg
+(also mirrored under /workspace/danielgueli-pages-dist/img/hero.jpg)
+Usage: front photo from the Grok-built artist site danielgueli.com; owned for
+Daniel Gueli Gypsy Jazz Orchestra booking pages.
+
+4) Brand mark
+File: logo-rm-striped.svg
+Original striped block with musical letters R and M for Romani Music
+International Booking Agency header. Created for this site; no third-party claim.
+
+5) Joseph Reinhardt — portrait (card photo for Django Rosenberg Trio)
+File: joseph-reinhardt.jpg
+Page: https://commons.wikimedia.org/wiki/File:Joseph_reinhardt.jpg
+Author: User:Polmeccartni (Gipsy Jazz Enciclopedia / hotclub.co.uk)
+License: GNU Free Documentation License 1.2+
+https://www.gnu.org/licenses/old-licenses/fdl-1.2.html
+Unmodified Wikimedia upload; keep credit beside the image.
+
+6) Nucky Basile — rhythm guitar (Django Rosenberg Trio member)
+No freely usable public-domain / Commons portrait found at deploy time.
+Member is named in copy only; card thumb uses Joseph Reinhardt (above).
+Placeholder note if a press still is supplied later: nucky-basile.jpg
+
+
+7) Daniel Gueli Gypsy Jazz Orchestra — member portraits (2026-10-01 page update)
+---------------------------------------------------------------
+Lead / Daniel card:
+  File: daniel-gueli-front.jpg
+  Same as item 3 above (danielgueli.com hero / front portrait).
+
+Fabio Marziali:
+  No freely usable Commons / owned press still on file at deploy time.
+  Page uses initials placeholder (FM). Clear press photo → fabio-marziali.jpg later.
+
+Jonn Reyna (piano; also written Jon Reyna):
+  No freely usable Commons / owned press still on file at deploy time.
+  Page uses initials placeholder (JR). Clear press photo → jonn-reyna.jpg later.
+
+Member bios use public facts only from:
+  https://danielgueli.com
+  https://www.gallistrings.com/en/artists/557-daniel-gueli-eng
+  https://fabiomarziali.com/press-and-cv
+  http://www.jonnreyna.com/en/Biography.html
+  https://www.jazztival.nl/jonn-reyna-quartet
+Full standing orchestra bill beyond Daniel + Fabio + Jonn was not found in public sources;
+other chairs labeled TBC on the artist page.
