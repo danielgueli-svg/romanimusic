@@ -374,7 +374,9 @@ export function lineageOf(family: FamilyHouse) {
       name: m.name,
       role: m.role,
       years: m.years,
-      artistSlug: m.artistSlug,
+      // Link only to artist pages that exist; lineage-only people have no
+      // /artists/<slug> page (those links were the GSC "Not found (404)" set).
+      artistSlug: m.artistSlug && getArtist(m.artistSlug) ? m.artistSlug : undefined,
       note: m.note,
       generation: extra?.generation ?? i + 1,
       born: extra?.born,

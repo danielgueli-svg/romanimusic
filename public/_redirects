@@ -1,0 +1,18 @@
+# Old booking URLs (GSC "Not found (404)", 7 Oct 2026) -> current booking pages.
+# Targets are the extensionless URLs the live site already serves, so there is
+# no second hop. /booking/join-us and /booking/dates stay 404 on purpose.
+/booking/artists/index.html /booking/#roster 301
+/booking/artists/ /booking/#roster 301
+/booking/artists /booking/#roster 301
+/booking/artists/django-rosenberg-trio.html /booking/django-rosenberg-trio 301
+/booking/artists/django-rosenberg-trio /booking/django-rosenberg-trio 301
+/booking/artists/marcia-bamberg-swing-quintet.html /booking/marcia-bamberg 301
+/booking/artists/marcia-bamberg-swing-quintet /booking/marcia-bamberg 301
+/booking/artists/marcia-bamberg-swing-quartet.html /booking/marcia-bamberg 301
+/booking/artists/marcia-bamberg-swing-quartet /booking/marcia-bamberg 301
+/booking/artists/brady-winterstein-trio.html /booking/brady-winterstein-trio 301
+/booking/artists/brady-winterstein-trio /booking/brady-winterstein-trio 301
+/booking/artists/daniel-gueli-swing-orchestra.html /booking/daniel-gueli-swing-orchestra 301
+/booking/artists/daniel-gueli-swing-orchestra /booking/daniel-gueli-swing-orchestra 301
+/booking/artists/daniel-gueli-gypsy-jazz-orchestra.html /booking/daniel-gueli-swing-orchestra 301
+/booking/artists/daniel-gueli-gypsy-jazz-orchestra /booking/daniel-gueli-swing-orchestra 301

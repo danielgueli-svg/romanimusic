@@ -1,4 +1,4 @@
-import { createFileRoute, Link, notFound } from "@tanstack/react-router";
+import { createFileRoute, Link, notFound, redirect } from "@tanstack/react-router";
 import { ArchiveCrumb } from "@/components/crumb";
 import { FiledClip, FiledPhoto } from "@/components/filed-media";
 import { SiteShell } from "@/components/site-shell";
@@ -16,7 +16,15 @@ export const Route = createFileRoute("/artists/$slug")({
   component: ArtistPage,
   loader: ({ params }) => {
     const artist = getArtist(params.slug);
-    if (!artist) throw notFound();
+    if (!artist) {
+      // People who only appear in a family lineage never had their own page.
+      // Old links to /artists/<slug> go to the family page that holds them.
+      const house = FAMILIES.find((f) => f.members.some((m) => m.artistSlug === params.slug));
+      if (house) {
+        throw redirect({ to: "/families/$slug", params: { slug: house.slug }, statusCode: 301 });
+      }
+      throw notFound();
+    }
     return { artist };
   },
   head: ({ loaderData }) =>
