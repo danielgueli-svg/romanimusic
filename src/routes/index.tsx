@@ -1,5 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { pageHead } from "@/lib/seo";
+import { SiteFooter } from "@/components/site-footer";
 export const Route = createFileRoute("/")({
   component: PortalHome,
   head: () =>
@@ -20,29 +21,32 @@ function PortalHome() {
     "mt-4 font-display text-5xl leading-[1.05] underline decoration-2 underline-offset-8 sm:text-6xl";
   const line = "mt-4 max-w-sm text-sm leading-relaxed";
   return (
-    <section className="flex min-h-dvh flex-col">
-      <div className="bg-white px-8 pb-6 pt-8 text-center sm:pt-10">
-        <h1 className="font-display text-6xl leading-none text-neutral-950 sm:text-8xl">
-          Romani Music
-        </h1>
-        <hr className="mx-auto mt-6 border-0 border-t border-neutral-950" />
-      </div>
-      <div className="flex min-h-0 flex-1 flex-col-reverse sm:grid sm:grid-cols-2">
-        <Link to="/archive" className={`${door} bg-white text-ink`}>
-          <span className={`${label} text-neutral-500`}>Archive</span>
-          <span className={`${name} decoration-neutral-400`}>Romani music archive</span>
-          <span className={`${line} text-neutral-600`}>
-            Styles, family lines, chronicle, and sources.
-          </span>
-        </Link>
-        <a href="/booking/" className={`${door} bg-black text-white`}>
-          <span className={`${label} text-white/70`}>Agency</span>
-          <span className={`${name} decoration-white/50`}>Romani Music Booking</span>
-          <span className={`${line} text-white/75`}>
-            Romani Music International Booking Agency
-          </span>
-        </a>
-      </div>
-    </section>
+    <>
+      <section className="flex min-h-dvh flex-col">
+        <div className="bg-white px-8 pb-6 pt-8 text-center sm:pt-10">
+          <h1 className="font-display text-6xl leading-none text-neutral-950 sm:text-8xl">
+            Romani Music
+          </h1>
+          <hr className="mx-auto mt-6 border-0 border-t border-neutral-950" />
+        </div>
+        <div className="flex min-h-0 flex-1 flex-col-reverse sm:grid sm:grid-cols-2">
+          <Link to="/archive" className={`${door} bg-white text-ink`}>
+            <span className={`${label} text-neutral-500`}>Archive</span>
+            <span className={`${name} decoration-neutral-400`}>Romani music archive</span>
+            <span className={`${line} text-neutral-600`}>
+              Styles, family lines, chronicle, and sources.
+            </span>
+          </Link>
+          <a href="/booking/" className={`${door} bg-black text-white`}>
+            <span className={`${label} text-white/70`}>Agency</span>
+            <span className={`${name} decoration-white/50`}>Romani Music Booking</span>
+            <span className={`${line} text-white/75`}>
+              Romani Music International Booking Agency
+            </span>
+          </a>
+        </div>
+      </section>
+      <SiteFooter portal />
+    </>
   );
 }

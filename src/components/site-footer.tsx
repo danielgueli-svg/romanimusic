@@ -2,13 +2,24 @@ import { Link } from "@tanstack/react-router";
 import { useI18n } from "@/i18n/provider";
 import { GYPSY_JAZZ_HUB, SITE_NAME } from "@/lib/site";
 
-export function SiteFooter({ compact = false, portal = false }: { compact?: boolean; portal?: boolean }) {
+export function SiteFooter({
+  compact = false,
+  portal = false,
+}: {
+  compact?: boolean;
+  portal?: boolean;
+}) {
   const { t } = useI18n();
   if (portal) {
     return (
       <footer className="border-t border-rule">
         <p className="mx-auto max-w-5xl px-5 py-6 text-center text-xs text-muted">
-          <a href="https://www.worldrentalert.com/" className="text-ink underline underline-offset-4 hover:text-accent">Powered by worldrentalert.com</a>
+          <a
+            href="https://www.worldrentalert.com/"
+            className="text-ink underline underline-offset-4 hover:text-accent"
+          >
+            Powered by worldrentalert.com
+          </a>
         </p>
       </footer>
     );
@@ -16,7 +27,16 @@ export function SiteFooter({ compact = false, portal = false }: { compact?: bool
   if (compact) {
     return (
       <footer className="mt-auto border-t border-rule">
-        <p className="mx-auto max-w-5xl px-5 py-6 text-xs text-muted">{SITE_NAME}{" · "}<a href="https://www.worldrentalert.com/" className="text-ink underline underline-offset-4 hover:text-accent">Powered by worldrentalert.com</a></p>
+        <p className="mx-auto max-w-5xl px-5 py-6 text-xs text-muted">
+          {SITE_NAME}
+          {" · "}
+          <a
+            href="https://www.worldrentalert.com/"
+            className="text-ink underline underline-offset-4 hover:text-accent"
+          >
+            Powered by worldrentalert.com
+          </a>
+        </p>
       </footer>
     );
   }
@@ -31,7 +51,10 @@ export function SiteFooter({ compact = false, portal = false }: { compact?: bool
           <p className="text-[11px] uppercase tracking-[0.18em] text-muted">{t("footer.sister")}</p>
           <p className="mt-2 text-sm leading-relaxed text-muted">
             {t("footer.sisterBody")}{" "}
-            <a href={GYPSY_JAZZ_HUB} className="text-ink underline underline-offset-4 hover:text-accent">
+            <a
+              href={GYPSY_JAZZ_HUB}
+              className="text-ink underline underline-offset-4 hover:text-accent"
+            >
               gypsyjazzhub.com
             </a>
             .
@@ -60,7 +83,12 @@ export function SiteFooter({ compact = false, portal = false }: { compact?: bool
         {t("footer.note")}
       </p>
       <p className="px-5 pb-6 text-center text-xs text-muted">
-        <a href="https://www.worldrentalert.com/" className="text-ink underline underline-offset-4 hover:text-accent">Powered by worldrentalert.com</a>
+        <a
+          href="https://www.worldrentalert.com/"
+          className="text-ink underline underline-offset-4 hover:text-accent"
+        >
+          Powered by worldrentalert.com
+        </a>
       </p>
     </footer>
   );
