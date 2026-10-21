@@ -36,7 +36,7 @@ export function SiteShell({ children }: { children: ReactNode }) {
         {children}
       </main>
       {hideSourcesBar ? null : <SourcesBar />}
-      {onPortal ? null : <SiteFooter />}
+      {onPortal ? <SiteFooter portal /> : <SiteFooter />}
     </div>
   );
 }

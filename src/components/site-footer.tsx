@@ -2,8 +2,17 @@ import { Link } from "@tanstack/react-router";
 import { useI18n } from "@/i18n/provider";
 import { GYPSY_JAZZ_HUB, SITE_NAME } from "@/lib/site";
 
-export function SiteFooter({ compact = false }: { compact?: boolean }) {
+export function SiteFooter({ compact = false, portal = false }: { compact?: boolean; portal?: boolean }) {
   const { t } = useI18n();
+  if (portal) {
+    return (
+      <footer className="border-t border-rule">
+        <p className="mx-auto max-w-5xl px-5 py-6 text-center text-xs text-muted">
+          <a href="https://www.worldrentalert.com/" className="text-ink underline underline-offset-4 hover:text-accent">Powered by worldrentalert.com</a>
+        </p>
+      </footer>
+    );
+  }
   if (compact) {
     return (
       <footer className="mt-auto border-t border-rule">
