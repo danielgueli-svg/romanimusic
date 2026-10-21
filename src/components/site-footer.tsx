@@ -7,7 +7,7 @@ export function SiteFooter({ compact = false }: { compact?: boolean }) {
   if (compact) {
     return (
       <footer className="mt-auto border-t border-rule">
-        <p className="mx-auto max-w-5xl px-5 py-6 text-xs text-muted">{SITE_NAME}</p>
+        <p className="mx-auto max-w-5xl px-5 py-6 text-xs text-muted">{SITE_NAME}{" · "}<a href="https://www.worldrentalert.com/" className="text-ink underline underline-offset-4 hover:text-accent">Powered by worldrentalert.com</a></p>
       </footer>
     );
   }
@@ -49,6 +49,9 @@ export function SiteFooter({ compact = false }: { compact?: boolean }) {
       </div>
       <p className="border-t border-rule px-5 py-6 text-center text-xs leading-relaxed text-muted">
         {t("footer.note")}
+      </p>
+      <p className="px-5 pb-6 text-center text-xs text-muted">
+        <a href="https://www.worldrentalert.com/" className="text-ink underline underline-offset-4 hover:text-accent">Powered by worldrentalert.com</a>
       </p>
     </footer>
   );
